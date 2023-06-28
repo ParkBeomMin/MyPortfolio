@@ -20,5 +20,9 @@
     "@nuxtjs/tailwindcss": "^4.2.0",
     "postcss": "^8.3.5",
     "vue-backtotop": "^1.6.1"
+  },
+  "volta": {
+    "node": "16.16.0",
+    "yarn": "4.0.0-rc.46"
   }
 }
