@@ -24,18 +24,7 @@ export default {
         this.$colorMode.value == "light" ? "dark" : "light";
     },
     showModal() {
-      if (this.modal) {
-        // Stop screen scrolling
-        document
-          .getElementsByTagName("html")[0]
-          .classList.remove("overflow-y-hidden");
-        this.modal = false;
-      } else {
-        document
-          .getElementsByTagName("html")[0]
-          .classList.add("overflow-y-hidden");
-        this.modal = true;
-      }
+      window.open("mailto:club20608@gamil.com");
     },
   },
 };
@@ -61,14 +50,14 @@ export default {
           <NuxtLink to="/">
             <img
               v-if="this.$colorMode.value == 'dark'"
-              src="~/static/logo-light.svg"
+              src="~/static/logo-light.png"
               class="w-36"
               alt="Light Logo"
             />
 
             <img
               v-else
-              src="~/static/logo-dark.svg"
+              src="~/static/logo-dark.png"
               alt="Color Logo"
               class="w-36"
             />

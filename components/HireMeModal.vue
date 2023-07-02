@@ -7,12 +7,20 @@ export default {
   data: () => {
     return {
       // @todo
+      name: "",
+      email: "",
+      category: "",
+      description: "",
     };
   },
   mounted() {
     feather.replace();
   },
-  methods: {},
+  methods: {
+    sendMail() {
+      console.log(this.name, this.email, this.category, this.description);
+    },
+  },
 };
 </script>
 
@@ -78,7 +86,8 @@ export default {
                 <form
                   @submit="
                     (e) => {
-                      e.preventDefault;
+                      e.preventDefault();
+                      sendMail();
                     }
                   "
                   class="max-w-xl m-4 text-left"
@@ -104,6 +113,7 @@ export default {
                       required=""
                       placeholder="Name"
                       aria-label="Name"
+                      v-model="name"
                     />
                   </div>
                   <div class="mt-6">
@@ -127,6 +137,7 @@ export default {
                       required=""
                       placeholder="Email"
                       aria-label="Email"
+                      v-model="email"
                     />
                   </div>
                   <div class="mt-6">
@@ -149,6 +160,7 @@ export default {
                       type="text"
                       required=""
                       aria-label="Project Category"
+                      v-model="category"
                     >
                       <option
                         v-for="category in categories"
@@ -181,6 +193,7 @@ export default {
                       rows="6"
                       aria-label="Details"
                       placeholder="Project description"
+                      v-model="description"
                     ></textarea>
                   </div>
 

@@ -8,18 +8,20 @@ export default {
       contacts: [
         {
           id: 1,
-          name: "Your Address, Your City, Your Country",
+          name: "Seoul",
           icon: "map-pin",
         },
         {
           id: 2,
-          name: "email@domain.com",
+          name: "club20608@gmail.com",
           icon: "mail",
+          link: "mailto:club20608@gmail.com",
         },
         {
           id: 3,
-          name: "555 8888 888",
+          name: "010 2434 7280",
           icon: "phone",
+          link: "tel:+821024347280",
         },
       ],
     };
@@ -43,7 +45,7 @@ export default {
     "
   >
     <!-- Contact form -->
-    <ContactForm />
+    <!-- <ContactForm /> -->
 
     <!-- Contact details -->
     <ContactDetails :contacts="contacts" />

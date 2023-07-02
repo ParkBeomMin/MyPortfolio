@@ -1,5 +1,11 @@
 <script>
+import { mapGetters } from "vuex";
 export default {
+  computed: {
+    ...mapGetters({
+      aboutMeCounter: "getAboutMeCounter",
+    }),
+  },
   data: () => {
     return {
       // @todo
@@ -33,7 +39,7 @@ export default {
             dark:text-secondary-light
             mb-2
           "
-          >7+</span
+          >{{ aboutMeCounter.year }}+</span
         >
         <span class="block text-md text-ternary-dark dark:text-ternary-light"
           >Years of experience</span
@@ -51,10 +57,10 @@ export default {
             dark:text-secondary-light
             mb-2
           "
-          >2k</span
+          >{{ aboutMeCounter.projectOfCompany }}</span
         >
         <span class="block text-md text-ternary-dark dark:text-ternary-light"
-          >Stars on GitHub</span
+          >Project of Company</span
         >
       </div>
 
@@ -69,15 +75,15 @@ export default {
             dark:text-secondary-light
             mb-2
           "
-          >32</span
+          >{{ aboutMeCounter.projectOfPersonal }}</span
         >
         <span class="block text-md text-ternary-dark dark:text-ternary-light"
-          >Positive feedback</span
+          >Project of Personal</span
         >
       </div>
 
       <!-- Projects completed counter -->
-      <div class="mb-20 sm:mb-0">
+      <!-- <div class="mb-20 sm:mb-0">
         <span
           class="
             font-general-medium
@@ -92,7 +98,7 @@ export default {
         <span class="block text-md text-ternary-dark dark:text-ternary-light"
           >Projects completed</span
         >
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
