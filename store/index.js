@@ -10,7 +10,7 @@ export const state = () => ({
       category: "Personal",
       img: "images/personal-project-3.png",
       publishDate: "Jul 02, 2023",
-      tag: "Vue Nuxt Node Javascript",
+      tag: "Javascript",
       objectivesTitle: "Objective",
       objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
       detailsTitle: "Challenge",
@@ -470,7 +470,7 @@ export const state = () => ({
       id: "4",
       title: "이력서 소분류, 보유기술 항목 추가",
       category: "Company",
-      img: "images/company-project-4.png",
+      img: "images/company/이력서소분류보유기술추가.png",
       publishDate: "Aug 09, 2021",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
@@ -479,25 +479,24 @@ export const state = () => ({
       projectImages: [
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/ui-project-1.jpg",
+          title: "이력서소분류보유기술추가",
+          img: "../images/company/이력서소분류보유기술추가.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-1.jpg",
+          title: "이력서소분류보유기술추가",
+          img: "../images/company/이력서소분류보유기술추가2.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-2.jpg",
+          title: "이력서소분류보유기술추가",
+          img: "../images/company/이력서소분류보유기술추가3.png",
         },
       ],
       projectDetails: [
         {
           id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+          details: `기존 직무 분류 체계(대분류-중분류)에서 소분류 체계로 변경되며 이에 따른 소분류 선택 기능 구현이 필요했습니다. 직무 데이터는 여러개 선택이 가능한데 데이터가 한 칼럼에 콤마스트링으로 들어가고 있었습니다. 그래서 데이터를 불러온 뒤 프론트단에서 이중 for문을 돌며 다시 변환해주는 작업이 곳곳에 들어가있었습니다. 프론트에서 데이터를 읽고 보내는 작업에 모두 변환을 시켜줘야했기 때문에 유지보수에 좋지 않다고 판단이 되어 직무 데이터를 프론트에서 바로 쓸 수 있게 DB단에서 리턴될 수 있도록 수정하였습니다.`,
         },
       ],
     },
@@ -532,7 +531,13 @@ export const state = () => ({
       projectDetails: [
         {
           id: uuidv4(),
-          details: "기존 마이페이지의 메뉴들 중",
+          details:
+            "UI/UX적으로 바뀌는 부분이 있어서 변경된 퍼블을 반영시키는 작업을 했습니다. 탭으로 나뉜 페이지였으며 쓰이는 데이터 구조가 비슷한 페이지였습니다. 비슷한 데이터 구조로 인해 데이터를 불러와서 가공하는 부분 코드가 반복되게 구현이 되어있었기에 mixin을 만들어 동일한 기능을 하는 함수가 한 곳에서 관리되도록 수정하였습니다.",
+        },
+        {
+          id: uuidv4(),
+          details:
+            "MY알림이라는 기능이 새롭게 생겨남에 따라 데이터 구조를 만들어야했고, 앱 푸쉬 발송도 이뤄져야했습니다. 앱 푸쉬는 firebase messaging 서비스를 활용하며 웹 서버와 다른 별도의 서버에 등록이 되어있었습니다. 따라서 앱 푸쉬를 발송하는 서버에 발송시킬 운영서버의 데이터를 불러오도록 crontab을 활용해 배치작업을 만들었습니다.",
         },
       ],
     },
@@ -603,7 +608,7 @@ export const state = () => ({
           id: uuidv4(),
           details: `합격 후기 작성 페이지 및 상세 페이지를 개편한 프로젝트입니다.
           <br>작성 페이지의 각 항목들이 변경됨에 따라 데이터 구조도 바뀌게 되어 이전 데이터들이 상세 페이지에 노출될 때 예외 처리가 필요했습니다.
-          <br>`,
+          <br>합격후기데이터들을 가져와서 component에서 뿌려지기 전에 computed에서 값을 검증하여 NULL 또는 undefined가 되지 않도록 처리했습니다.`,
         },
         {
           id: uuidv4(),
