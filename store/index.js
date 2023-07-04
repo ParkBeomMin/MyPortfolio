@@ -47,7 +47,8 @@ export const state = () => ({
       publishDate: "Jun 30, 2023",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
-      objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
+      objectivesDetails:
+        "트래픽이 가장 많이 발생하는 페이지에서 브랜드 홍보 효과 증대<br>사이트 내 이동 편의성 증대",
       detailsTitle: "Challenge",
       projectImages: [
         {
@@ -82,7 +83,8 @@ export const state = () => ({
       publishDate: "Dec 26, 2022",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
-      objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
+      objectivesDetails:
+        "간편하게 경력 정보를 볼러올 수 있어 사용자의 편의성 증대<br>건강보험공단에서 인증된 정보를 불러올 수 있어 신뢰도 있는 DB확보",
       detailsTitle: "Challenge",
       projectImages: [
         {
@@ -110,14 +112,15 @@ export const state = () => ({
       ],
     },
     {
-      id: "12",
+      id: uuidv4(),
       title: "면접AI 튜터 서비스",
       category: "Company",
       img: "images/company-project-12.png",
       publishDate: "May 16, 2023",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
-      objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
+      objectivesDetails:
+        "gpt api를 활용한 ai 면접 튜터 서비스로 사용자 유입 증대",
       detailsTitle: "Challenge",
       projectImages: [
         {
@@ -216,14 +219,14 @@ export const state = () => ({
       ],
     },
     {
-      id: "11",
+      id: uuidv4(),
       title: "채용 유지보수",
       category: "Company",
       img: "images/company-project-11.png",
       publishDate: "Feb 17, 2023",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
-      objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
+      objectivesDetails: "개인화 카테고리 기능 추가로 사용자 편의성 증대",
       detailsTitle: "Challenge",
       projectImages: [
         {
@@ -251,14 +254,15 @@ export const state = () => ({
       ],
     },
     {
-      id: "10",
+      id: uuidv4(),
       title: "즉시지원 레이어 유지보수",
       category: "Company",
       img: "images/company-project-10.png",
       publishDate: "Feb 03, 2023",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
-      objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
+      objectivesDetails:
+        "단절된 즉시지원 고객 경험을 개선해 한 번에 즉시지원이 가능하도록 프로세스 개편",
       detailsTitle: "Challenge",
       projectImages: [
         {
@@ -286,14 +290,14 @@ export const state = () => ({
       ],
     },
     {
-      id: "9",
+      id: uuidv4(),
       title: "공고/지원자 관리 개편",
       category: "Company",
       img: "images/company-project-9.png",
       publishDate: "Dec 26, 2022",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
-      objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
+      objectivesDetails: "사용자 증가를 대비하기 위한 사용성 개선",
       detailsTitle: "Challenge",
       projectImages: [
         {
@@ -321,14 +325,15 @@ export const state = () => ({
       ],
     },
     {
-      id: "8",
+      id: uuidv4(),
       title: "기업 개편",
       category: "Company",
       img: "images/company-project-8.png",
       publishDate: "Sep 15, 2022",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
-      objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
+      objectivesDetails:
+        "기업 전체 메뉴 중 활용도가 낮은 서비스의 전면적인 개편을 통한 UV/PV 증대<br/>가독성 및 사용성을 높일 수 있는 UI/UX 개선<br>변동성 있는 DB로 노출 콘텐츠 재구성",
       detailsTitle: "Challenge",
       projectImages: [
         {
@@ -391,14 +396,15 @@ export const state = () => ({
       ],
     },
     {
-      id: "6",
+      id: uuidv4(),
       title: "관심기업 서비스",
       category: "Company",
       img: "images/company-project-6.png",
       publishDate: "Jan 14, 2022",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
-      objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
+      objectivesDetails:
+        "관심기업 활용도를 높이고 추천/알림 로직을 활용하여 재방문 유도",
       detailsTitle: "Challenge",
       projectImages: [
         {
@@ -426,14 +432,14 @@ export const state = () => ({
       ],
     },
     {
-      id: "5",
+      id: uuidv4(),
       title: "네이버 자격증 서비스 연동",
       category: "Company",
       img: "images/company-project-5.png",
       publishDate: "Nov 05, 2021",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
-      objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
+      objectivesDetails: "편리한 연동 서비스 사용으로 인한 이력서 DB 질적 향상",
       detailsTitle: "Challenge",
       projectImages: [
         {
@@ -462,7 +468,7 @@ export const state = () => ({
     },
     {
       id: "4",
-      title: "이력서 보유기술 항목 추가",
+      title: "이력서 소분류, 보유기술 항목 추가",
       category: "Company",
       img: "images/company-project-4.png",
       publishDate: "Aug 09, 2021",
@@ -496,37 +502,37 @@ export const state = () => ({
       ],
     },
     {
-      id: "3",
+      id: uuidv4(),
       title: "마이페이지 개편",
       category: "Company",
-      img: "images/company-project-3.png",
+      img: "images/company/마이페이지개편.png",
       publishDate: "Jun 09, 2021",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
-      objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
+      objectivesDetails:
+        "핵심 기능 중심의 메뉴 개편<br/>맞춤형 개인화 서비스 추가<br/>캐치카페 이용 회원 앱 사용성 증대 및 지속방문 유도",
       detailsTitle: "Challenge",
       projectImages: [
         {
           id: uuidv4(),
           title: "Uber Project Management UI",
-          img: "../images/ui-project-1.jpg",
+          img: "../images/company/마이페이지개편.png",
         },
         {
           id: uuidv4(),
           title: "Uber Project Management UI",
-          img: "../images/web-project-1.jpg",
+          img: "../images/company/마이페이지개편2.png",
         },
         {
           id: uuidv4(),
           title: "Uber Project Management UI",
-          img: "../images/web-project-2.jpg",
+          img: "../images/company/마이페이지개편3.png",
         },
       ],
       projectDetails: [
         {
           id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+          details: "기존 마이페이지의 메뉴들 중",
         },
       ],
     },
