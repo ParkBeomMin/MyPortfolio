@@ -86,38 +86,50 @@ export const state = () => ({
       ],
     },
     {
-      id: uuidv4(),
+      id: "건강보험공단 경력 연동 서비스",
       title: "건강보험공단 경력 연동 서비스",
       category: "Company",
-      img: "images/company-project-13.png",
+      img: "images/company/건강보험공단경력연동서비스.png",
       publishDate: "Dec 26, 2022",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
       objectivesDetails:
         "간편하게 경력 정보를 볼러올 수 있어 사용자의 편의성 증대<br>건강보험공단에서 인증된 정보를 불러올 수 있어 신뢰도 있는 DB확보",
-      detailsTitle: "Challenge",
+      detailsTitle: "Detail",
       projectImages: [
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/ui-project-1.jpg",
+          title: "건강보험공단경력연동서비스",
+          img: "../images/company/건강보험공단경력연동서비스.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-1.jpg",
+          title: "건강보험공단경력연동서비스",
+          img: "../images/company/건강보험공단경력연동서비스2.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-2.jpg",
+          title: "건강보험공단경력연동서비스",
+          img: "../images/company/건강보험공단경력연동서비스3.png",
         },
       ],
       projectDetails: [
         {
           id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+          details: `
+            외부 API를 활용하여 건강보험공단의 자격득실데이터와 건강보험료데이터를 받아와서 경력 정보를 보여주는 방식입니다.
+            <br>외부 API의 구현 방식에 의해 총 11번의 API를 호출헤애헸습니다. 같은 id값을 파라미터로 11번을 호출하고 첫번째 호출에 대해 간편인증에 대한 응답 값을 받으며 나머지 10개는 pending상태가 됩니다.
+            <br>이후 간편인증이 완료되면 모든 API의 응답값을 받아온 후, 건강보험료를 토대로 예상 연봉값을 계산하여 사용했습니다.
+            <br>하지만 IOS환경에서 pending된 API가 있을 경우 서비스가 백그라운드 상태에 진입 후 다시 포그라운드 상태로 될 경우 이전 호출을 재호출하게 되어 외부API에는 중복 요청이 가게되며 기존 pending된 요청에 대한 응답도 받지 못하는 문제가 발생하였습니다.
+            <br>pending되는 10개의 호출에 대해 자사 서비스에서는 pending이 발생하지 않도록 바로 응답을 보내고 서버단에서 pending을 유지하고 응답값은 DB로 저장되도록 처리한 후, DB를 읽어오는 API를 초단위로 호출하여 응답을 받아올 수 있도록 처리하였습니다.
+          `,
+        },
+        {
+          id: uuidv4(),
+          details: `
+            기존 프로젝트 구조상 코드의 분리 없이 router내에 모든 비즈니스 로직이 포함되어 있었는데, 모델과 컨트롤러를 분리하여 코드의 가독성을 높였고 재사용성을 높였습니다.
+            <br>그리고 모델과 컨트롤러 구조로 만들어지다 보니 기존 구조에서는 잘 활용할 수 없었던 테스트 코드를 작성하여 프로젝트의 완성도를 높였습니다.
+          `,
         },
       ],
     },
