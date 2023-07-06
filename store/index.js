@@ -40,38 +40,48 @@ export const state = () => ({
       ],
     },
     {
-      id: uuidv4(),
+      id: "채용상세개편",
       title: "채용 상세 개편",
       category: "Company",
-      img: "images/company-project-14.png",
+      img: "images/company/채용상세개편.png",
       publishDate: "Jun 30, 2023",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
       objectivesDetails:
         "트래픽이 가장 많이 발생하는 페이지에서 브랜드 홍보 효과 증대<br>사이트 내 이동 편의성 증대",
-      detailsTitle: "Challenge",
+      detailsTitle: "Detail",
       projectImages: [
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/ui-project-1.jpg",
+          title: "채용상세개편",
+          img: "../images/company/채용상세개편.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-1.jpg",
+          title: "채용상세개편",
+          img: "../images/company/채용상세개편2.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-2.jpg",
+          title: "채용상세개편",
+          img: "../images/company/채용상세개편3.png",
         },
       ],
       projectDetails: [
         {
           id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+          details: `
+            기존 채용 상세 페이지에서는 사이트 내로 유입할 수 있는 경로가 부족하여, GNB를 노출할 수 있도록 추가하였습니다.
+            <br>기존 GNB 컴포넌트를 재사용하여 유지보수의 편의성을 높였습니다.
+          `,
+        },
+        {
+          id: uuidv4(),
+          details: `
+            채용 공고 하단에 위치한 커스텀 공고 배너는 랜덤하게 값을 가져오는 로직으로 구현되어 있었는데, 각 케이스에 맞게 값들을 셋팅해주도록 switch문으로 만들어져있었습니다.
+            <br>가독성을 위해 computed로 변수를 선언하며 switch문에서 셋팅되던 값들을 각각으로 분리하였습니다.
+            <br>그리고 mounted훅에서 네트워크 호출이 이루어졌던 부분도 fetch훅으로 이동시켜 서버사이드에서 네트워크 호출을 처리할 수 있도록 수정하였습니다.
+          `,
         },
       ],
     },
