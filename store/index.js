@@ -134,38 +134,49 @@ export const state = () => ({
       ],
     },
     {
-      id: uuidv4(),
+      id: "면접AI튜터서비스",
       title: "면접AI 튜터 서비스",
       category: "Company",
-      img: "images/company-project-12.png",
+      img: "images/company/면접AI튜터서비스.png",
       publishDate: "May 16, 2023",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
       objectivesDetails:
         "gpt api를 활용한 ai 면접 튜터 서비스로 사용자 유입 증대",
-      detailsTitle: "Challenge",
+      detailsTitle: "Detail",
       projectImages: [
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/ui-project-1.jpg",
+          title: "면접AI튜터서비스",
+          img: "../images/company/면접AI튜터서비스.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-1.jpg",
+          title: "면접AI튜터서비스",
+          img: "../images/company/면접AI튜터서비스2.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-2.jpg",
+          title: "면접AI튜터서비스",
+          img: "../images/company/면접AI튜터서비스3.png",
         },
       ],
       projectDetails: [
         {
           id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+          details: `
+            openai의 gpt api를 활용해 예상 면접 질문을 만들어주고, 꼬리질문도 만들어주는 서비스입니다.
+            <br>자체 필터링 로직을 만들어, 면접 기출 DB를 뽑아온 후 해당 면접 질문들을 토대로 프롬프트를 만들어서 gpt api를 통해 예상 면접 질문 리스트를 가져왔습니다.
+            <br>외부 api에 의존하다보니 api의 응답속도가 1분이 넘어가도 컨트롤을 할 수 없었습니다.
+            <br>따라서 프롬프트를 최적화했고 로딩화면을 추가했습니다. 그리고 nginx 설정에서 해당 api만 90s 타임아웃 설정을 추가했습니다.
+          `,
+        },
+        {
+          id: uuidv4(),
+          details: `
+            함수형 프로그래밍 패러다임 중 '하나의 함수는 한가지 역할만 해야한다', '함수를 통해 변수가 변질되면 안된다'를 지키며 구조를 잡아갔습니다.
+            <br>이렇게 구조를 잡아가다보니 테스트 코드를 작성하여 실행시키며 수정하는 것에 장점이 있었고, 수정사항들을 반영하는데에도 사이드이펙트가 적어지는 장점이 있었습니다.
+          `,
         },
       ],
     },
@@ -241,116 +252,141 @@ export const state = () => ({
       ],
     },
     {
-      id: uuidv4(),
+      id: "채용유지보수",
       title: "채용 유지보수",
       category: "Company",
-      img: "images/company-project-11.png",
+      img: "images/company/채용유지보수.png",
       publishDate: "Feb 17, 2023",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
       objectivesDetails: "개인화 카테고리 기능 추가로 사용자 편의성 증대",
-      detailsTitle: "Challenge",
+      detailsTitle: "Detail",
       projectImages: [
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/ui-project-1.jpg",
+          title: "채용유지보수",
+          img: "../images/company/채용유지보수.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-1.jpg",
+          title: "채용유지보수",
+          img: "../images/company/채용유지보수2.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-2.jpg",
+          title: "채용유지보수",
+          img: "../images/company/채용유지보수3.png",
         },
       ],
       projectDetails: [
         {
           id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+          details: `
+            사용자 이력서 DB와 공고 DB를 활용해 개인화된 공고 카테고리를 추천해주는 서비스입니다.
+            <br>기존 카테고리는 결과값이 보장되었지만 개인화된 카테고리는 결과값이 무조건 있을 것이라는 보장이 없었습니다.
+            <br>따라서 사용자 이력서 DB를 활용하되 결과값이 없는 경우엔 그 후순위들로 값을 가져오도록 처리하기 위해 쿼리에서 반복문을 통해 결과값을 가져올 수 있도록 처리했습니다.
+          `,
+        },
+        {
+          id: uuidv4(),
+          details: `
+            요구사항이 사이트 내 다른 서비스의 로직을 그대로 가져오는 것이어서 단순히 그렇게 구현을 시작했는데, 결과값이 없는 경우 등 이 서비스에서의 특성으로 인해 좀 더 논의되었어야할 부분들이 많이 있었습니다.
+            <br>개발에 들어가기 전 충분하게 생각해보고 논의를 나눴었으면 좋았을 것이라는 아쉬움이 남았지만, 빠르게 의사결정을 하여 다시 로직을 수정하였고 이미 구현된 상태에서 수정하기엔 코드가 더 복잡해질 가능성이 있어서 과감하게 다시 처음부터 설계를 하고 구현했습니다.
+          `,
         },
       ],
     },
     {
-      id: uuidv4(),
+      id: "즉시지원레이어유지보수",
       title: "즉시지원 레이어 유지보수",
       category: "Company",
-      img: "images/company-project-10.png",
+      img: "images/company/즉시지원레이어유지보수.png",
       publishDate: "Feb 03, 2023",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
       objectivesDetails:
         "단절된 즉시지원 고객 경험을 개선해 한 번에 즉시지원이 가능하도록 프로세스 개편",
-      detailsTitle: "Challenge",
+      detailsTitle: "Detail",
       projectImages: [
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/ui-project-1.jpg",
+          title: "즉시지원레이어유지보수",
+          img: "../images/company/즉시지원레이어유지보수.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-1.jpg",
+          title: "즉시지원레이어유지보수",
+          img: "../images/company/즉시지원레이어유지보수2.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-2.jpg",
+          title: "즉시지원레이어유지보수",
+          img: "../images/company/즉시지원레이어유지보수3.png",
         },
       ],
       projectDetails: [
         {
           id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+          details: `
+            즉시지원 레이어를 통해 이력서 및 자소서 수정을 하러 이동하였을 때 기존 즉시지원 화면으로 되돌아올 수 있게 사용성을 개선시키는 작업이었습니다.
+            <br>페이지 전환이었으면 이전 페이지로 리턴이 되도록하면 되었지만, 요구사항은 새탭으로 전환이 되어야했습니다.
+            <br>새탭으로 작성페이지를 띄울 때 쿼리스트링을 통해 즉시지원 레이어를 통해서 왔다는 값을 알려주고 그에 맞게 알럿을 띄워주고 탭이 닫히도록 처리했습니다.
+            <br>기존 활성화되어 있던 즉시지원 레이어의 이력서와 자소서의 상태 값도 같이 업데이트가 되어야했기에 즉시지원 레이어에서 값을 불러오는 함수를 broadcast channel로 등록해놓은 뒤 작성페이지에서 해당 함수를 호출하게 하여 탭 간 이벤트 호출이 될 수 있도록 하였습니다.
+          `,
         },
       ],
     },
     {
-      id: uuidv4(),
+      id: "공고지원자관리개편",
       title: "공고/지원자 관리 개편",
       category: "Company",
-      img: "images/company-project-9.png",
+      img: "images/company/공고지원자관리개편.png",
       publishDate: "Dec 26, 2022",
-      tag: "Vue Nuxt Node Javascript",
+      tag: "Vue Node Javascript",
       objectivesTitle: "Objective",
       objectivesDetails: "사용자 증가를 대비하기 위한 사용성 개선",
-      detailsTitle: "Challenge",
+      detailsTitle: "Detail",
       projectImages: [
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/ui-project-1.jpg",
+          title: "공고지원자관리개편",
+          img: "../images/company/공고지원자관리개편.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-1.jpg",
+          title: "공고지원자관리개편",
+          img: "../images/company/공고지원자관리개편2.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-2.jpg",
+          title: "공고지원자관리개편",
+          img: "../images/company/공고지원자관리개편3.png",
         },
       ],
       projectDetails: [
         {
           id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+          details: `
+            지원자 관리의 메일 발송 레이어에 알림톡 발송 관련 기능을 추가하는 작업을 했습니다.
+            <br>기존 메일 발송 레이어 코드가 모두 한 군데에 모여있었고, 레이어의 크기 조절에 관한 코드는 각 레이어들에 반복되게 작성이 되어있었습니다.
+            <br>레이어에 공통적으로 쓰이는 코드는 mixin으로 분리하여 재사용가능하게 하였고, 메일 발송 레이어의 코드들은 발송 내용 작성과 발송 내용 확인 컴포넌트로 분리하였습니다.
+          `,
+        },
+        {
+          id: uuidv4(),
+          details: `
+            채용보고서에 일일 단위의 조회수와 지원자수를 그래프로 표현하는 기능을 추가했습니다.
+            <br>vue-chartjs라이브러리의 Line차트를 활용했으며 일일단위 데이터는 모든 데이터를 가져와서 사용할 경우 성능 이슈가 발생함을 고려해 미리 만들어두고 만들어둔 데이터를 가져오도록 설계하였습니다.
+            <br>Airflow로 스케쥴링 작업을 만들어서 매 자정마다 모든 공고에 대해 하루 단위의 조회수와 지원자수 데이터를 만들어두도록 했습니다.
+          `,
         },
       ],
     },
     {
-      id: uuidv4(),
+      id: "기업개편",
       title: "기업 개편",
       category: "Company",
-      img: "images/company-project-8.png",
+      img: "images/company/기업개편.png",
       publishDate: "Sep 15, 2022",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
@@ -360,25 +396,38 @@ export const state = () => ({
       projectImages: [
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/ui-project-1.jpg",
+          title: "기업개편",
+          img: "../images/company/기업개편.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-1.jpg",
+          title: "기업개편",
+          img: "../images/company/기업개편.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-2.jpg",
+          title: "기업개편",
+          img: "../images/company/기업개편.png",
         },
       ],
       projectDetails: [
         {
           id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+          details: `
+            3명의 개발자가 참여해 추천기업,기업분석,연계 및 어드민으로 업무 분배를 하였고, 연계 및 어드민 작업을 했습니다.
+            <br>연계 작업은 추천기업과 기업분석에서 새롭게 추가되는 기능들을 기업상세 또는 마이페이지에 적용시키는 작업이었습니다.
+            <br>작업이 완료된 부분의 컴포넌트를 가져다가 쓰면서 필요한 예외처리들은 props로 값을 넘겨서 예외처리될 수 있도록 수정하여 사용하였습니다.
+            <br>그 중 기능은 같지만 html구조가 다른 부분들도 있어서 기능은 mixin으로 분리하고 컴포넌트를 따로 만들어서 사용할 수 있게 만들었습니다.
+            `,
+        },
+        {
+          id: uuidv4(),
+          details: `
+            어드민은 기존 프로젝트와는 다르게 Vue3와 Typescript로 이루어진 프로젝트였고 추천기업 데이터를 관리하기 위한 페이지를 작업했습니다.
+            <br>기존 코드들이 탭 변환을 하는 것이 각 페이지에서 독립적으로 구현이 되어있어서 탭 메뉴용 composition api를 만들어서 공통으로 쓸 수 있도록 했습니다.
+            <br>각 기능들도 composition api로 구현했으며, 사용해보면서 기존 mixin과 유사하다는 생각이 들었고 코드를 파악하는데에 있어서 mixin보다는 훨씬 강점이 있다고 느껴졌습니다.
+            <br>페이지 전환 후 다시 돌아왔을 때, 값이 유지되어야 하는 요구사항이 있었는데 composition api에서 전역으로 변수를 선언하여 처리하였습니다. 개별적인 페이지여서 변수가 겹치거나 하는 일은 없기에 큰 문제가 없지만, 상태관리를 활용했으면 더 좋은 코드가 되지 않았을까하는 아쉬움이 있습니다.
+          `,
         },
       ],
     },
@@ -418,46 +467,56 @@ export const state = () => ({
       ],
     },
     {
-      id: uuidv4(),
+      id: "관심기업서비스",
       title: "관심기업 서비스",
       category: "Company",
-      img: "images/company-project-6.png",
+      img: "images/company/관심기업서비스개편.png",
       publishDate: "Jan 14, 2022",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
       objectivesDetails:
         "관심기업 활용도를 높이고 추천/알림 로직을 활용하여 재방문 유도",
-      detailsTitle: "Challenge",
+      detailsTitle: "Detail",
       projectImages: [
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/ui-project-1.jpg",
+          title: "관심기업서비스",
+          img: "../images/company/관심기업서비스개편.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-1.jpg",
+          title: "관심기업서비스",
+          img: "../images/company/관심기업서비스개편.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-2.jpg",
+          title: "관심기업서비스",
+          img: "../images/company/관심기업서비스개편.png",
         },
       ],
       projectDetails: [
         {
           id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+          details: `
+            관심기업 DB와 사용자 이력서 DB를 활용해 공고를 추천해주는 로직을 구현했습니다.
+            <br>테스트 환경에서는 문제없었지만, 운영환경에서는 데이터의 양이 달라 속도 이슈가 생겼습니다. 백단에서 로직이 실행되고 푸쉬알림을 보내는 기능이었기에 사용자 환경에 영향은 없었지만 DB부하의 가능성이 있어서 개선을 해야했습니다.
+            <br>기존 쿼리에서 with절로 만들어진 테이블들을 모두 임시테이블로 변경하여 평균 10분정도 소요되던 부분을 5분내외로 개선하였습니다.
+          `,
+        },
+        {
+          id: uuidv4(),
+          details: `
+            위 로직의 결과값들을 앱 푸쉬로 발송을 하며, 푸쉬를 클릭하여 들어왔을 때의 처리와 클릭 수 체크가 필요했습니다.
+            <br>발송되는 푸쉬의 url데이터에 쿼리스트링을 붙였고, middleware를 만들어 웹 접근 시 해당 쿼리스트링이 있으면 체크해서 클릭 로그가 쌓이도록 구현하였습니다.
+          `,
         },
       ],
     },
     {
-      id: uuidv4(),
-      title: "네이버 자격증 서비스 연동",
+      id: "이력서자격증네이버연동",
+      title: "이력서 자격증 네이버연동",
       category: "Company",
-      img: "images/company-project-5.png",
+      img: "images/company/이력서자격증네이버연동.png",
       publishDate: "Nov 05, 2021",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
@@ -466,25 +525,29 @@ export const state = () => ({
       projectImages: [
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/ui-project-1.jpg",
+          title: "이력서자격증네이버연동",
+          img: "../images/company/이력서자격증네이버연동",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-1.jpg",
+          title: "이력서자격증네이버연동",
+          img: "../images/company/이력서자격증네이버연동",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-2.jpg",
+          title: "이력서자격증네이버연동",
+          img: "../images/company/이력서자격증네이버연동",
         },
       ],
       projectDetails: [
         {
           id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+          details: `
+            네이버 자격증 API를 연동해 자격증 데이터를 불러오는 기능을 구현했습니다.
+            <br>네이버 API를 호출하여 네이버 화면으로 넘어간 후, 로그인 및 인증을 진행하여 결과값을 받아 데이터를 뿌려주도록 했습니다.
+            <br>웹 브라우저에서는 문제없이 잘 동작하였지만, 안드로이드 앱에서는 외부링크로 인식이 되어 앱을 이탈하여 기본 브라우저로 호출이 되어 응답 값을 받을 수가 없는 상황이 되어 네이티브 코드에서 해당 url은 앱 내의 웹뷰에서 동작할 수 있도록 처리했습니다.
+            <br>그리고 브라우저 환경에서는 callback으로 api를 호출하게 해서 값을 받았지만 앱 환경에서는 제대로 동작이 되질 않아 callback 페이지를 만들고 callback 페이지에서 다시 기존 화면으로 라우팅되도록 구현하였습니다.
+          `,
         },
       ],
     },
