@@ -30,6 +30,12 @@
     >
       <BackToTop />
     </div>
+
+    <DetailImageLayer
+      v-if="isShowDetailLayer"
+      :url="detailImageUrl"
+      @close="isShowDetailLayer = false"
+    />
   </div>
 </template>
 
@@ -38,16 +44,27 @@ import feather from "feather-icons";
 import AppHeader from "../components/shared/AppHeader.vue";
 import AppFooter from "../components/shared/AppFooter.vue";
 import BackToTop from "../components/BackToTop.vue";
+import DetailImageLayer from "../components/projects/DetailImageLayer.vue";
+
 export default {
   data: () => {
     return {
       // Todo
+      isShowDetailLayer: false,
+      detailImageUrl: "",
     };
   },
   mounted() {
     feather.replace();
+    this.$nuxt.$on("showDetailLayer", this.showDetailLayer);
   },
-  components: { AppFooter, BackToTop, AppHeader },
+  methods: {
+    showDetailLayer(url) {
+      this.detailImageUrl = url;
+      this.isShowDetailLayer = true;
+    },
+  },
+  components: { AppFooter, BackToTop, AppHeader, DetailImageLayer },
 };
 </script>
 

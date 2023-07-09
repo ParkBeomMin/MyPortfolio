@@ -14,11 +14,14 @@ export default {
     },
   },
   mounted() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
     feather.replace();
   },
   updated() {
     feather.replace();
   },
+  methods: {},
   components: { ProjectRelatedProjects },
 };
 </script>
@@ -86,10 +89,19 @@ export default {
           class="mb-10 sm:mb-0"
           v-for="projectImage in project.projectImages"
           :key="projectImage.id"
+          @click="$nuxt.$emit('showDetailLayer', projectImage.img)"
         >
           <img
             :src="projectImage.img"
-            class="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
+            class="
+              rounded-xl
+              cursor-pointer
+              shadow-lg
+              sm:shadow-none
+              object-cover
+              w-64
+              h-36
+            "
           />
         </div>
       </div>

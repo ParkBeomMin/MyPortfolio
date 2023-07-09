@@ -219,7 +219,7 @@ export const state = () => ({
       id: uuidv4(),
       title: "진학사 조식봇",
       category: "Personal",
-      img: "images/personal/josikbot.png",
+      img: "images/personal/조식봇.png",
       publishDate: "Feb 22, 2023",
       tag: "Vue Nuxt Node Javascript",
       link: "https://pf.kakao.com/_Qaxaxaxj",
