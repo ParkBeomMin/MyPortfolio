@@ -627,37 +627,42 @@ export const state = () => ({
       ],
     },
     {
-      id: "2",
+      id: "이력서유도레이어서비스",
       title: "이력서 유도레이어 서비스",
       category: "Company",
-      img: "images/company-project-2.png",
+      img: "images/company/이력서유도레이어.png",
       publishDate: "Feb 08, 2021",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
-      objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
-      detailsTitle: "Challenge",
+      objectivesDetails:
+        "이력서의 필수항목들을 입력할 수 있게 유도하여 이력서 DB 질적 향상",
+      detailsTitle: "Detail",
       projectImages: [
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/ui-project-1.jpg",
+          title: "이력서유도레이어",
+          img: "../images/company/이력서유도레이어.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-1.jpg",
+          title: "이력서유도레이어",
+          img: "../images/company/이력서유도레이어.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-2.jpg",
+          title: "이력서유도레이어",
+          img: "../images/company/이력서유도레이어.png",
         },
       ],
       projectDetails: [
         {
           id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+          details: `
+            사용자의 이력서 작성 상태를 파악하여 단계별로 이력서 필수값을 입력할 수 있도록 레이어를 노출시켜주는 서비스입니다.  
+            <br>레이어 컴포넌트안에서 사용자의 작성 상태에 따라 컴포넌트를 다르게 보여주도록 구성했습니다. 작성 상태에 대한 값은 초기 개발때는 사용자의 모든 이력서 데이터를 가져와서 프론트단에서 계산을 해서 보여주는 방식이었는데 코드의 가독성과 성능적인 부분을 고려해 쿼리단에서 단계값만 리턴해줄 수 있도록 수정하였습니다.
+            <br>유도레이어는 사이트 곳곳에서 사용되는 특성이 있어서 레이아웃 또는 푸터와 같이 공통적으로 쓰이는 곳에 컴포넌트를 등록시킨 뒤, nuxt 이벤트버스에 레이어 호출 함수를 등록시켜 어디서든 호출하기 쉽도록 했습니다.
+            <br>사이트 곳곳에서 사용되다보니 유도레이어 이후 이벤트들이 각각 달라서 그에 따른 예외처리 코드들이 늘어나게 되었습니다. 이벤트버스로 등록시킨 유도레이어 호출 함수에 callback 변수를 추가하여 유도레이어가 완료되었거나 닫혔을 때에 대해 callback함수를 받을 수 있도록 수정하였습니다.
+          `,
         },
       ],
     },
@@ -670,7 +675,7 @@ export const state = () => ({
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
       objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
-      detailsTitle: "Challenge",
+      detailsTitle: "Detail",
       projectImages: [
         {
           id: uuidv4(),
