@@ -5,10 +5,10 @@ export const state = () => ({
   projectsDescription: "Some of the projects I have successfully completed",
   projects: [
     {
-      id: uuidv4(),
+      id: "AboutMe",
       title: "About Me",
       category: "Personal",
-      img: "images/personal-project-3.png",
+      img: "images/personal/AboutMe.png",
       publishDate: "Jul 02, 2023",
       tag: "Javascript",
       objectivesTitle: "Objective",
@@ -17,25 +17,34 @@ export const state = () => ({
       projectImages: [
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/ui-project-1.jpg",
+          title: "About Me",
+          img: "../images/personal/AboutMe.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-1.jpg",
+          title: "About Me",
+          img: "../images/personal/AboutMe.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-2.jpg",
+          title: "About Me",
+          img: "../images/personal/AboutMe.png",
         },
       ],
       projectDetails: [
         {
           id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+          details: `
+            친구들에게 공유하여 나에 대해 물어보고 그 관심들을 모아서 나의 새싹을 키우는 서비스입니다.
+          `,
+        },
+        {
+          id: uuidv4(),
+          details: `
+            vanilla js의 사용 경험을 위해 진행했던 프로젝트입니다. spa구조로 만들었으며 라우터를 직접 구현하여 window객체에 라우팅 함수를 등록시켜 사용했습니다.
+            <br>firebase를 활용하여 호스팅과 데이터베이스를 연동시켰습니다. 그리고 webpack을 활용하여 배포용 파일을 번들링하여 효율적인 배포가 될 수 있도록 했습니다.
+            <br>공유하기 기능은 url을 클립보드에 복사하는 기능인데 카카오 브라우저에서는 navigator.clipboard.writeText가 동작하지 않아 copy 관련 라이브러리를 활용했습니다.
+          `,
         },
       ],
     },
