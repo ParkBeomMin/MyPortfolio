@@ -225,7 +225,7 @@ export const state = () => ({
       link: "https://pf.kakao.com/_Qaxaxaxj",
       objectivesTitle: "Objective",
       objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
-      detailsTitle: "Challenge",
+      detailsTitle: "Detail",
       projectImages: [
         {
           id: uuidv4(),
@@ -392,7 +392,7 @@ export const state = () => ({
       objectivesTitle: "Objective",
       objectivesDetails:
         "기업 전체 메뉴 중 활용도가 낮은 서비스의 전면적인 개편을 통한 UV/PV 증대<br/>가독성 및 사용성을 높일 수 있는 UI/UX 개선<br>변동성 있는 DB로 노출 콘텐츠 재구성",
-      detailsTitle: "Challenge",
+      detailsTitle: "Detail",
       projectImages: [
         {
           id: uuidv4(),
@@ -521,7 +521,7 @@ export const state = () => ({
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
       objectivesDetails: "편리한 연동 서비스 사용으로 인한 이력서 DB 질적 향상",
-      detailsTitle: "Challenge",
+      detailsTitle: "Detail",
       projectImages: [
         {
           id: uuidv4(),
@@ -552,7 +552,7 @@ export const state = () => ({
       ],
     },
     {
-      id: "4",
+      id: "이력서소분류보유기술추가",
       title: "이력서 소분류, 보유기술 항목 추가",
       category: "Company",
       img: "images/company/이력서소분류보유기술추가.png",
@@ -560,7 +560,7 @@ export const state = () => ({
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
       objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
-      detailsTitle: "Challenge",
+      detailsTitle: "Detail",
       projectImages: [
         {
           id: uuidv4(),
@@ -586,7 +586,7 @@ export const state = () => ({
       ],
     },
     {
-      id: uuidv4(),
+      id: "마이페이지개편",
       title: "마이페이지 개편",
       category: "Company",
       img: "images/company/마이페이지개편.png",
@@ -595,21 +595,21 @@ export const state = () => ({
       objectivesTitle: "Objective",
       objectivesDetails:
         "핵심 기능 중심의 메뉴 개편<br/>맞춤형 개인화 서비스 추가<br/>캐치카페 이용 회원 앱 사용성 증대 및 지속방문 유도",
-      detailsTitle: "Challenge",
+      detailsTitle: "Detail",
       projectImages: [
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
+          title: "마이페이지개편",
           img: "../images/company/마이페이지개편.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
+          title: "마이페이지개편",
           img: "../images/company/마이페이지개편2.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
+          title: "마이페이지개편",
           img: "../images/company/마이페이지개편3.png",
         },
       ],
@@ -667,7 +667,7 @@ export const state = () => ({
       ],
     },
     {
-      id: uuidv4(),
+      id: "최종합격꿀팁개편",
       title: "최종합격꿀팁 개편",
       category: "Company",
       img: "images/company/최종합격꿀팁개편.png",
