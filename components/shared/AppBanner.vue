@@ -62,7 +62,7 @@ export default {
       </p>
       <div class="flex justify-center sm:block">
         <a
-          href="/bmpark_resume.pdf"
+          href="/MyPortfolio/박범민_이력서.pdf"
           download=""
           class="
             flex
