@@ -1,3 +1,4 @@
-yarn install
-
-yarn build
+on:
+  push:
+    branches:
+    - main
