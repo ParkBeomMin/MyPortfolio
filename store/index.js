@@ -1305,7 +1305,7 @@ export const state = () => ({
     {
       id: uuidv4(),
       title: "Catch",
-      img: "~/static/brands/catch.svg",
+      img: "brands/catch.svg",
       link: "https://catch.co.kr",
     },
   ],
