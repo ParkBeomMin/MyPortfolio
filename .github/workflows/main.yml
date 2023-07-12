@@ -4,11 +4,13 @@ on:
   push:
     branches:
       - master
-
+      
+  
 jobs:
+      
   deploy:
-    runs-on: ubuntu-latest
-
+    runs-on: [ubuntu-latest, node16]
+  
     steps:
       - uses: actions/checkout@v2
 
