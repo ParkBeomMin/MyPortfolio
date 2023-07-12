@@ -110,6 +110,17 @@ export default {
             </a>
           </div>
           <!-- Single project objectives -->
+          <div v-if="project.projectSchedule" class="mb-7">
+            <p
+              class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2"
+            >
+              {{ project.projectSchedule }}
+            </p>
+            <p
+              class="font-general-regular text-primary-dark dark:text-ternary-light"
+              v-html="project.projectSchedule"
+            ></p>
+          </div>
           <div class="mb-7">
             <p
               class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2"
