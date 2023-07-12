@@ -1,18 +1,27 @@
 <script>
+import { mapGetters } from "vuex";
 export default {
   props: {
     select: {
       type: String,
       default: "projects",
     },
-    selectOptions: {
-      type: Array,
-      default: () => [
-        "Web Application",
-        "Mobile Application",
-        "UI/UX Design",
-        "Branding & Anim",
-      ],
+    // selectOptions: {
+    //   type: Array,
+    //   default: () => [
+    //     "Web Application",
+    //     "Mobile Application",
+    //     "UI/UX Design",
+    //     "Branding & Anim",
+    //   ],
+    // },
+  },
+  computed: {
+    ...mapGetters({
+      categories: "getCategories",
+    }),
+    selectOptions() {
+      return this.categories;
     },
   },
 };
@@ -41,11 +50,11 @@ export default {
     <option value class="text-sm sm:text-md">All Projects</option>
     <option
       v-for="option in selectOptions"
-      :key="option"
-      :value="option"
+      :key="option.value"
+      :value="option.value"
       class="sm:text-md"
     >
-      {{ option }}
+      {{ option.name }}
     </option>
   </select>
 </template>

@@ -1358,12 +1358,12 @@ export const state = () => ({
   categories: [
     {
       id: uuidv4(),
-      value: "company",
+      value: "Company",
       name: "Company Project",
     },
     {
       id: uuidv4(),
-      value: "personal",
+      value: "Personal",
       name: "Personal Project",
     },
     // {
@@ -1395,6 +1395,7 @@ export const getters = {
         .length,
     };
   },
+  getCategories: (state) => state.categories,
 };
 
 export const mutations = {
