@@ -33,7 +33,17 @@ export default {
       <!-- Project heading and meta info -->
       <div>
         <p
-          class="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7"
+          class="
+            font-general-medium
+            text-left text-3xl
+            sm:text-4xl
+            font-bold
+            text-primary-dark
+            dark:text-primary-light
+            mt-14
+            sm:mt-20
+            mb-7
+          "
         >
           {{ project.title }}
         </p>
@@ -44,7 +54,13 @@ export default {
               class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
             ></i>
             <span
-              class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light"
+              class="
+                font-general-medium
+                ml-2
+                leading-none
+                text-primary-dark
+                dark:text-primary-light
+              "
               >{{ project.publishDate }}</span
             >
           </div>
@@ -54,7 +70,13 @@ export default {
               class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
             ></i>
             <span
-              class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light"
+              class="
+                font-general-medium
+                ml-2
+                leading-none
+                text-primary-dark
+                dark:text-primary-light
+              "
               >{{ project.tag }}</span
             >
           </div>
@@ -71,7 +93,15 @@ export default {
         >
           <img
             :src="projectImage.img"
-            class="rounded-xl cursor-pointer shadow-lg sm:shadow-none object-cover w-64 h-36"
+            class="
+              rounded-xl
+              cursor-pointer
+              shadow-lg
+              sm:shadow-none
+              object-cover
+              w-64
+              h-36
+            "
           />
         </div>
       </div>
@@ -83,13 +113,22 @@ export default {
           <!-- Single project link -->
           <div v-if="project.link" class="mb-7">
             <p
-              class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2"
+              class="
+                font-general-medium
+                text-2xl text-ternary-dark
+                dark:text-ternary-light
+                mb-2
+              "
             >
               Link
             </p>
             <a :href="project.link" target="_blank">
               <p
-                class="font-general-regular text-primary-dark dark:text-ternary-light"
+                class="
+                  font-general-regular
+                  text-primary-dark
+                  dark:text-ternary-light
+                "
               >
                 {{ project.link }}
               </p>
@@ -97,38 +136,65 @@ export default {
           </div>
           <div v-if="project.github" class="mb-7">
             <p
-              class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2"
+              class="
+                font-general-medium
+                text-2xl text-ternary-dark
+                dark:text-ternary-light
+                mb-2
+              "
             >
               <i data-feather="github" class="w-6 sm:w-8 h-6 sm:h-8"></i>
             </p>
             <a :href="project.github" target="_blank">
               <p
-                class="font-general-regular text-primary-dark dark:text-ternary-light"
+                class="
+                  font-general-regular
+                  text-primary-dark
+                  dark:text-ternary-light
+                "
               >
                 {{ project.github }}
               </p>
             </a>
           </div>
           <!-- Single project objectives -->
-          <div v-if="project.projectSchedule" class="mb-7">
+          <div v-if="project.workPeriod" class="mb-7">
             <p
-              class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2"
+              class="
+                font-general-medium
+                text-2xl text-ternary-dark
+                dark:text-ternary-light
+                mb-2
+              "
             >
-              {{ project.projectSchedule }}
+              Work Period
             </p>
             <p
-              class="font-general-regular text-primary-dark dark:text-ternary-light"
-              v-html="project.projectSchedule"
+              class="
+                font-general-regular
+                text-primary-dark
+                dark:text-ternary-light
+              "
+              v-html="project.workPeriod"
             ></p>
           </div>
           <div class="mb-7">
             <p
-              class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2"
+              class="
+                font-general-medium
+                text-2xl text-ternary-dark
+                dark:text-ternary-light
+                mb-2
+              "
             >
               {{ project.objectivesTitle }}
             </p>
             <p
-              class="font-general-regular text-primary-dark dark:text-ternary-light"
+              class="
+                font-general-regular
+                text-primary-dark
+                dark:text-ternary-light
+              "
               v-html="project.objectivesDetails"
             ></p>
           </div>
@@ -137,21 +203,33 @@ export default {
         <!-- Single project right section details -->
         <div class="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
           <p
-            class="font-general-medium text-primary-dark dark:text-primary-light text-2xl font-bold mb-7"
+            class="
+              font-general-medium
+              text-primary-dark
+              dark:text-primary-light
+              text-2xl
+              font-bold
+              mb-7
+            "
           >
             {{ project.detailsTitle }}
           </p>
           <p
             v-for="projectDetail in project.projectDetails"
             :key="projectDetail.id"
-            class="font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
+            class="
+              font-general-regular
+              mb-5
+              text-lg text-ternary-dark
+              dark:text-ternary-light
+            "
             v-html="projectDetail.details"
           ></p>
         </div>
       </div>
 
       <!-- Project related projects -->
-      <ProjectRelatedProjects />
+      <!-- <ProjectRelatedProjects /> -->
     </div>
 
     <!-- Load not found components if no project found -->

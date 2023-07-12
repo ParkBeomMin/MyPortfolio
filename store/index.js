@@ -13,7 +13,7 @@ export const state = () => ({
       tag: "Vue Nuxt Javascript",
       objectivesTitle: "Objective",
       objectivesDetails: "열람제한 영역 수정으로 인한 사용자 유입 증가",
-      projectSchedule: "2023.06.26 ~ 2023.07.17",
+      workPeriod: "2023.06.26 ~ 2023.07.17",
       detailsTitle: "Detail",
       projectImages: [
         {
