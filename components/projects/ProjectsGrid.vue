@@ -3,6 +3,9 @@ import { mapState } from "vuex";
 import feather from "feather-icons";
 
 export default {
+  props: {
+    isLimit: { type: Boolean, default: false },
+  },
   data: () => {
     return {
       selectedProject: "",
@@ -13,11 +16,14 @@ export default {
     ...mapState(["projectsHeading", "projectsDescription", "projects"]),
     filteredProjects() {
       if (this.selectedProject) {
-        return this.filterProjectsByCategory();
+        return this.filterProjectsByCategory().slice(0, this.limit);
       } else if (this.searchProject) {
-        return this.filterProjectsBySearch();
+        return this.filterProjectsBySearch().slice(0, this.limit);
       }
-      return this.projects;
+      return this.projects.slice(0, this.limit);
+    },
+    limit() {
+      return this.isLimit ? 9 : this.projects.length;
     },
   },
   methods: {
