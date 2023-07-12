@@ -19,17 +19,17 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "기업분석리포트개편",
-          img: "/images/company/기업분석리포트개편.png",
+          img: "images/company/기업분석리포트개편.png",
         },
         {
           id: uuidv4(),
           title: "기업분석리포트개편",
-          img: "/images/company/기업분석리포트개편2.png",
+          img: "images/company/기업분석리포트개편2.png",
         },
         {
           id: uuidv4(),
           title: "기업분석리포트개편",
-          img: "/images/company/기업분석리포트개편3.png",
+          img: "images/company/기업분석리포트개편3.png",
         },
       ],
       projectDetails: [
@@ -66,17 +66,17 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "About Me",
-          img: "/images/personal/AboutMe.png",
+          img: "images/personal/AboutMe.png",
         },
         {
           id: uuidv4(),
           title: "About Me",
-          img: "/images/personal/AboutMe2.png",
+          img: "images/personal/AboutMe2.png",
         },
         {
           id: uuidv4(),
           title: "About Me",
-          img: "/images/personal/AboutMe3.png",
+          img: "images/personal/AboutMe3.png",
         },
       ],
       projectDetails: [
@@ -111,17 +111,17 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "채용상세개편",
-          img: "/images/company/채용상세개편.png",
+          img: "images/company/채용상세개편.png",
         },
         {
           id: uuidv4(),
           title: "채용상세개편",
-          img: "/images/company/채용상세개편2.png",
+          img: "images/company/채용상세개편2.png",
         },
         {
           id: uuidv4(),
           title: "채용상세개편",
-          img: "/images/company/채용상세개편3.png",
+          img: "images/company/채용상세개편3.png",
         },
       ],
       projectDetails: [
@@ -157,17 +157,17 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "건강보험공단경력연동서비스",
-          img: "/images/company/건강보험공단경력연동서비스.png",
+          img: "images/company/건강보험공단경력연동서비스.png",
         },
         {
           id: uuidv4(),
           title: "건강보험공단경력연동서비스",
-          img: "/images/company/건강보험공단경력연동서비스2.png",
+          img: "images/company/건강보험공단경력연동서비스2.png",
         },
         {
           id: uuidv4(),
           title: "건강보험공단경력연동서비스",
-          img: "/images/company/건강보험공단경력연동서비스3.png",
+          img: "images/company/건강보험공단경력연동서비스3.png",
         },
       ],
       projectDetails: [
@@ -205,17 +205,17 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "면접AI튜터서비스",
-          img: "/images/company/면접AI튜터서비스.png",
+          img: "images/company/면접AI튜터서비스.png",
         },
         {
           id: uuidv4(),
           title: "면접AI튜터서비스",
-          img: "/images/company/면접AI튜터서비스2.png",
+          img: "images/company/면접AI튜터서비스2.png",
         },
         {
           id: uuidv4(),
           title: "면접AI튜터서비스",
-          img: "/images/company/면접AI튜터서비스3.png",
+          img: "images/company/면접AI튜터서비스3.png",
         },
       ],
       projectDetails: [
@@ -252,17 +252,17 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "What is my team?",
-          img: "/images/personal/what-is-my-team.png",
+          img: "images/personal/what-is-my-team.png",
         },
         {
           id: uuidv4(),
           title: "What is my team?",
-          img: "/images/personal/what-is-my-team2.png",
+          img: "images/personal/what-is-my-team2.png",
         },
         {
           id: uuidv4(),
           title: "What is my team?",
-          img: "/images/personal/what-is-my-team3.png",
+          img: "images/personal/what-is-my-team3.png",
         },
       ],
       projectDetails: [
@@ -297,17 +297,17 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "진학사 조식봇",
-          img: "/images/personal/조식봇.png",
+          img: "images/personal/조식봇.png",
         },
         {
           id: uuidv4(),
           title: "진학사 조식봇",
-          img: "/images/personal/조식봇2.png",
+          img: "images/personal/조식봇2.png",
         },
         {
           id: uuidv4(),
           title: "진학사 조식봇",
-          img: "/images/personal/조식봇3.png",
+          img: "images/personal/조식봇3.png",
         },
       ],
       projectDetails: [
@@ -341,17 +341,17 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "채용유지보수",
-          img: "/images/company/채용유지보수.png",
+          img: "images/company/채용유지보수.png",
         },
         {
           id: uuidv4(),
           title: "채용유지보수",
-          img: "/images/company/채용유지보수2.png",
+          img: "images/company/채용유지보수2.png",
         },
         {
           id: uuidv4(),
           title: "채용유지보수",
-          img: "/images/company/채용유지보수3.png",
+          img: "images/company/채용유지보수3.png",
         },
       ],
       projectDetails: [
@@ -387,17 +387,17 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "즉시지원레이어유지보수",
-          img: "/images/company/즉시지원레이어유지보수.png",
+          img: "images/company/즉시지원레이어유지보수.png",
         },
         {
           id: uuidv4(),
           title: "즉시지원레이어유지보수",
-          img: "/images/company/즉시지원레이어유지보수2.png",
+          img: "images/company/즉시지원레이어유지보수2.png",
         },
         {
           id: uuidv4(),
           title: "즉시지원레이어유지보수",
-          img: "/images/company/즉시지원레이어유지보수3.png",
+          img: "images/company/즉시지원레이어유지보수3.png",
         },
       ],
       projectDetails: [
@@ -426,17 +426,17 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "공고지원자관리개편",
-          img: "/images/company/공고지원자관리개편.png",
+          img: "images/company/공고지원자관리개편.png",
         },
         {
           id: uuidv4(),
           title: "공고지원자관리개편",
-          img: "/images/company/공고지원자관리개편2.png",
+          img: "images/company/공고지원자관리개편2.png",
         },
         {
           id: uuidv4(),
           title: "공고지원자관리개편",
-          img: "/images/company/공고지원자관리개편3.png",
+          img: "images/company/공고지원자관리개편3.png",
         },
       ],
       projectDetails: [
@@ -473,17 +473,17 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "기업개편",
-          img: "/images/company/기업개편.png",
+          img: "images/company/기업개편.png",
         },
         {
           id: uuidv4(),
           title: "기업개편",
-          img: "/images/company/기업개편.png",
+          img: "images/company/기업개편.png",
         },
         {
           id: uuidv4(),
           title: "기업개편",
-          img: "/images/company/기업개편.png",
+          img: "images/company/기업개편.png",
         },
       ],
       projectDetails: [
@@ -522,17 +522,17 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "관심기업서비스",
-          img: "/images/company/관심기업서비스개편.png",
+          img: "images/company/관심기업서비스개편.png",
         },
         {
           id: uuidv4(),
           title: "관심기업서비스",
-          img: "/images/company/관심기업서비스개편.png",
+          img: "images/company/관심기업서비스개편.png",
         },
         {
           id: uuidv4(),
           title: "관심기업서비스",
-          img: "/images/company/관심기업서비스개편.png",
+          img: "images/company/관심기업서비스개편.png",
         },
       ],
       projectDetails: [
@@ -567,17 +567,17 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "이력서자격증네이버연동",
-          img: "/images/company/이력서자격증네이버연동",
+          img: "images/company/이력서자격증네이버연동",
         },
         {
           id: uuidv4(),
           title: "이력서자격증네이버연동",
-          img: "/images/company/이력서자격증네이버연동",
+          img: "images/company/이력서자격증네이버연동",
         },
         {
           id: uuidv4(),
           title: "이력서자격증네이버연동",
-          img: "/images/company/이력서자격증네이버연동",
+          img: "images/company/이력서자격증네이버연동",
         },
       ],
       projectDetails: [
@@ -606,17 +606,17 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "이력서소분류보유기술추가",
-          img: "/images/company/이력서소분류보유기술추가.png",
+          img: "images/company/이력서소분류보유기술추가.png",
         },
         {
           id: uuidv4(),
           title: "이력서소분류보유기술추가",
-          img: "/images/company/이력서소분류보유기술추가2.png",
+          img: "images/company/이력서소분류보유기술추가2.png",
         },
         {
           id: uuidv4(),
           title: "이력서소분류보유기술추가",
-          img: "/images/company/이력서소분류보유기술추가3.png",
+          img: "images/company/이력서소분류보유기술추가3.png",
         },
       ],
       projectDetails: [
@@ -641,17 +641,17 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "마이페이지개편",
-          img: "/images/company/마이페이지개편.png",
+          img: "images/company/마이페이지개편.png",
         },
         {
           id: uuidv4(),
           title: "마이페이지개편",
-          img: "/images/company/마이페이지개편2.png",
+          img: "images/company/마이페이지개편2.png",
         },
         {
           id: uuidv4(),
           title: "마이페이지개편",
-          img: "/images/company/마이페이지개편3.png",
+          img: "images/company/마이페이지개편3.png",
         },
       ],
       projectDetails: [
@@ -682,17 +682,17 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "이력서유도레이어",
-          img: "/images/company/이력서유도레이어.png",
+          img: "images/company/이력서유도레이어.png",
         },
         {
           id: uuidv4(),
           title: "이력서유도레이어",
-          img: "/images/company/이력서유도레이어.png",
+          img: "images/company/이력서유도레이어.png",
         },
         {
           id: uuidv4(),
           title: "이력서유도레이어",
-          img: "/images/company/이력서유도레이어.png",
+          img: "images/company/이력서유도레이어.png",
         },
       ],
       projectDetails: [
@@ -721,17 +721,17 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "최종합격꿀팁개편",
-          img: "/images/company/최종합격꿀팁개편.png",
+          img: "images/company/최종합격꿀팁개편.png",
         },
         {
           id: uuidv4(),
           title: "최종합격꿀팁개편",
-          img: "/images/company/최종합격꿀팁개편2.png",
+          img: "images/company/최종합격꿀팁개편2.png",
         },
         {
           id: uuidv4(),
           title: "최종합격꿀팁개편",
-          img: "/images/company/최종합격꿀팁개편3.png",
+          img: "images/company/최종합격꿀팁개편3.png",
         },
       ],
       projectDetails: [
@@ -767,17 +767,17 @@ export const state = () => ({
     //     {
     //       id: uuidv4(),
     //       title: "Phoenix Digital Agency",
-    //       img: "/images/mobile-project-1.jpg",
+    //       img: "images/mobile-project-1.jpg",
     //     },
     //     {
     //       id: uuidv4(),
     //       title: "Phoenix Digital Agency",
-    //       img: "/images/web-project-2.jpg",
+    //       img: "images/web-project-2.jpg",
     //     },
     //     {
     //       id: uuidv4(),
     //       title: "Phoenix Digital Agency",
-    //       img: "/images/mobile-project-2.jpg",
+    //       img: "images/mobile-project-2.jpg",
     //     },
     //   ],
     //   companyInfos: [
@@ -877,17 +877,17 @@ export const state = () => ({
     //     {
     //       id: uuidv4(),
     //       title: "Project Management UI",
-    //       img: "/images/mobile-project-1.jpg",
+    //       img: "images/mobile-project-1.jpg",
     //     },
     //     {
     //       id: uuidv4(),
     //       title: "Project Management UI",
-    //       img: "/images/web-project-2.jpg",
+    //       img: "images/web-project-2.jpg",
     //     },
     //     {
     //       id: uuidv4(),
     //       title: "Project Management UI",
-    //       img: "/images/mobile-project-2.jpg",
+    //       img: "images/mobile-project-2.jpg",
     //     },
     //   ],
     //   companyInfos: [
