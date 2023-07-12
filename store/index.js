@@ -5,6 +5,51 @@ export const state = () => ({
   projectsDescription: "Some of the projects I have successfully completed",
   projects: [
     {
+      id: "기업분석리포트개편",
+      title: "기업분석 리포트 개편",
+      category: "Company",
+      img: "images/company/기업분석리포트개편.png",
+      publishDate: "Jul 17, 2023",
+      tag: "Vue Nuxt Javascript",
+      objectivesTitle: "Objective",
+      objectivesDetails: "열람제한 영역 수정으로 인한 사용자 유입 증가",
+      projectSchedule: "2023.06.26 ~ 2023.07.17",
+      detailsTitle: "Detail",
+      projectImages: [
+        {
+          id: uuidv4(),
+          title: "기업분석리포트개편",
+          img: "../images/company/기업분석리포트개편.png",
+        },
+        {
+          id: uuidv4(),
+          title: "기업분석리포트개편",
+          img: "../images/company/기업분석리포트개편2.png",
+        },
+        {
+          id: uuidv4(),
+          title: "기업분석리포트개편",
+          img: "../images/company/기업분석리포트개편3.png",
+        },
+      ],
+      projectDetails: [
+        {
+          id: uuidv4(),
+          details: `
+            비로그인과 입사제안N일 때 열람 제한 영역이 다르게 될 수 있도록 개편하는 프로젝트입니다.  
+            <br>그리고 기존 열람 제한 영역도 html또는 네트워크 응답값으로 확인할 수 있는 부분도 개선하였습니다.
+          `,
+        },
+        {
+          id: uuidv4(),
+          details: `
+            열람 제한이 되는 영역의 데이터를 서버 단에서 처리하여서 응답을 보내도록 수정하였습니다. 네트워크 응답값으로도 열람 제한된 영역의 데이터를 확인할 수 없도록 했습니다.  
+            <br>열람 제한이 된 상태에서 입사제안을 수락하는 경우 바로 열람 제한이 풀리도록 하기 위해 asyncData를 재호출하는 $nuxt.refresh()를 활용했습니다. 사용자 경험을 고려하여 화면 새로고침 없이 화면 그대로에서 데이터를 재셋팅하도록 했습니다.
+          `,
+        },
+      ],
+    },
+    {
       id: "AboutMe",
       title: "About Me",
       category: "Personal",
@@ -12,8 +57,11 @@ export const state = () => ({
       publishDate: "Jul 02, 2023",
       tag: "Javascript",
       objectivesTitle: "Objective",
-      objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
-      detailsTitle: "Challenge",
+      objectivesDetails:
+        "친구들이 생각하는 나는 어떤 사람일까? 친구들의 마음이 모여 나의 새싹을 키워보세요!",
+      detailsTitle: "Detail",
+      link: "https://aboutme2.web.app",
+      github: "https://github.com/ParkBeomMin/AboutMe",
       projectImages: [
         {
           id: uuidv4(),
@@ -23,12 +71,12 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "About Me",
-          img: "../images/personal/AboutMe.png",
+          img: "../images/personal/AboutMe2.png",
         },
         {
           id: uuidv4(),
           title: "About Me",
-          img: "../images/personal/AboutMe.png",
+          img: "../images/personal/AboutMe3.png",
         },
       ],
       projectDetails: [
@@ -190,73 +238,92 @@ export const state = () => ({
       ],
     },
     {
-      id: uuidv4(),
+      id: "What is my team?",
       title: "What is my team?",
       category: "Personal",
-      img: "images/personal-project-2.png",
+      img: "images/personal/what-is-my-team.png",
       publishDate: "-",
-      tag: "Vue Nuxt Node Javascript",
+      tag: "Vue Typescript",
       objectivesTitle: "Objective",
-      objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
-      detailsTitle: "Challenge",
+      objectivesDetails: "나의 관상은 EPL 프리미어리그 어느 팀에 어울릴까?",
+      detailsTitle: "Detail",
+      github: "https://github.com/ParkBeomMin/WhatIsMyTeam/",
       projectImages: [
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/ui-project-1.jpg",
+          title: "What is my team?",
+          img: "../images/personal/what-is-my-team.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-1.jpg",
+          title: "What is my team?",
+          img: "../images/personal/what-is-my-team2.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-2.jpg",
+          title: "What is my team?",
+          img: "../images/personal/what-is-my-team3.png",
         },
       ],
       projectDetails: [
         {
           id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+          details: `
+            사용자들의 얼굴을 인식해 미리 학습된 모델로 어느 epl팀과 유사한 얼굴인지 알려주는 서비스입니다.
+          `,
+        },
+        {
+          id: uuidv4(),
+          details: `
+            teachablemachine 서비스를 이용해 모델을 생성하고, 모델을 생성하기 위한 학습 데이터는 epl공식 사이트의 팀별 선수들 사진을 크롤링해서 학습시켰습니다.
+            <br>사용자에게 이미지 사진을 입력받아 모델의 응답값을 토대로 결과를 보여줍니다.
+          `,
         },
       ],
     },
     {
-      id: uuidv4(),
+      id: "진학사 조식봇",
       title: "진학사 조식봇",
       category: "Personal",
       img: "images/personal/조식봇.png",
       publishDate: "Feb 22, 2023",
-      tag: "Vue Nuxt Node Javascript",
+      tag: "Vue Node Javascript",
       link: "https://pf.kakao.com/_Qaxaxaxj",
       objectivesTitle: "Objective",
-      objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
+      objectivesDetails:
+        "진학사 조식 메뉴를 챗봇을 통해 간편하게 알아볼 수 있습니다.",
       detailsTitle: "Detail",
       projectImages: [
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/personal/josikbot.png",
+          title: "진학사 조식봇",
+          img: "../images/personal/조식봇.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-1.jpg",
+          title: "진학사 조식봇",
+          img: "../images/personal/조식봇2.png",
         },
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-2.jpg",
+          title: "진학사 조식봇",
+          img: "../images/personal/조식봇3.png",
         },
       ],
       projectDetails: [
         {
           id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+          details: `
+            카카오톡 플러스 친구를 통해 조식 메뉴를 알려주는 챗봇 서비스입니다.
+          `,
+        },
+        {
+          id: uuidv4(),
+          details: `
+            플러스 친구의 Skill 기능을 통해 미리 만들어둔 서버 api로 연결될 수 있도록 했습니다.  
+            <br>서버 호스팅은 구름ide를 활용하였고, 팀즈로 공지되는 메뉴 이미지를 google vision으로 읽어서 텍스트를 추출한 뒤 firebase db로 저장을 시켰습니다.
+            <br>사용자에게 오늘 메뉴, 내일 메뉴 등 요청이 들어오면 그에 맞게 메뉴 리스트를 응답해줍니다.
+          `,
         },
       ],
     },
@@ -437,41 +504,6 @@ export const state = () => ({
             <br>각 기능들도 composition api로 구현했으며, 사용해보면서 기존 mixin과 유사하다는 생각이 들었고 코드를 파악하는데에 있어서 mixin보다는 훨씬 강점이 있다고 느껴졌습니다.
             <br>페이지 전환 후 다시 돌아왔을 때, 값이 유지되어야 하는 요구사항이 있었는데 composition api에서 전역으로 변수를 선언하여 처리하였습니다. 개별적인 페이지여서 변수가 겹치거나 하는 일은 없기에 큰 문제가 없지만, 상태관리를 활용했으면 더 좋은 코드가 되지 않았을까하는 아쉬움이 있습니다.
           `,
-        },
-      ],
-    },
-    {
-      id: "7",
-      title: "캐치 알바 연동",
-      category: "Company",
-      img: "images/company-project-7.png",
-      publishDate: "Apr 16, 2022",
-      tag: "Vue Nuxt Node Javascript",
-      objectivesTitle: "Objective",
-      objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
-      detailsTitle: "Challenge",
-      projectImages: [
-        {
-          id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/ui-project-1.jpg",
-        },
-        {
-          id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-1.jpg",
-        },
-        {
-          id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-2.jpg",
-        },
-      ],
-      projectDetails: [
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
         },
       ],
     },
