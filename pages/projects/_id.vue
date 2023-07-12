@@ -99,7 +99,7 @@ export default {
             <p
               class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2"
             >
-              GitHub
+              <i data-feather="github" class="w-6 sm:w-8 h-6 sm:h-8"></i>
             </p>
             <a :href="project.github" target="_blank">
               <p
