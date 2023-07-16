@@ -62,7 +62,7 @@
         @click="$nuxt.$emit('showDetailLayer', projectImage.img)"
       >
         <img
-          :src="`../${projectImage.img}`"
+          :src="`${projectImage.img}`"
           class="
             rounded-xl
             cursor-pointer
