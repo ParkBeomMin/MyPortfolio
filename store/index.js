@@ -48,6 +48,7 @@ export const state = () => ({
           `,
         },
       ],
+      projectSummary: {},
     },
     {
       id: "AboutMe",
@@ -238,7 +239,7 @@ export const state = () => ({
       ],
     },
     {
-      id: "What is my team?",
+      id: "WhatIsMyTeam?",
       title: "What is my team?",
       category: "Personal",
       img: "images/personal/what-is-my-team.png",
