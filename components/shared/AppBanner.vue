@@ -1,10 +1,14 @@
 <script>
 import feather from "feather-icons";
-
+import Portfolio from "~/components/download/Portfolio";
 export default {
+  components: {
+    Portfolio,
+  },
   data: () => {
     return {
       // Todo
+      initBody: "",
     };
   },
 
@@ -13,6 +17,23 @@ export default {
   },
   updated() {
     feather.replace();
+  },
+  methods: {
+    download() {
+      window.onbeforeprint = this.beforePrint;
+      window.onafterprint = this.afterPrint;
+      window.print();
+      window.onbeforeprint = window.onafterprint = null;
+    },
+    beforePrint() {
+      const prtContent = this.$refs.portfolio.$el;
+      this.initBody = document.body.innerHTML;
+      document.body.innerHTML = prtContent.innerHTML;
+    },
+
+    afterPrint() {
+      document.body.innerHTML = this.initBody;
+    },
   },
 };
 </script>
@@ -97,6 +118,42 @@ export default {
             >Download CV</span
           ></a
         >
+        <a
+          href="javascript:void(0)"
+          class="
+            flex
+            justify-center
+            items-center
+            w-36
+            sm:w-48
+            mt-12
+            mb-6
+            sm:mb-0
+            text-lg
+            border border-indigo-200
+            dark:border-ternary-dark
+            py-2.5
+            sm:py-3
+            shadow-lg
+            rounded-lg
+            bg-indigo-50
+            focus:ring-1 focus:ring-indigo-900
+            hover:bg-indigo-500
+            text-gray-500
+            hover:text-white
+            duration-500
+          "
+          aria-label="Download Career Descrition"
+          @click.prevent="download"
+        >
+          <i
+            data-feather="arrow-down-circle"
+            class="ml-0 sm:ml-1 mr-2 sm:mr-3 w-5 sm:w-6 duration-100"
+          />
+          <span class="text-sm sm:text-lg font-general-medium duration-100">
+            Download Portfolio
+          </span>
+        </a>
       </div>
     </div>
 
@@ -109,6 +166,7 @@ export default {
       />
       <img v-else src="~/static/developer.jpg" alt="Developer Light" />
     </div>
+    <portfolio ref="portfolio" v-show="false" />
   </section>
 </template>
 
