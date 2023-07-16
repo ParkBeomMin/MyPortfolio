@@ -48,6 +48,7 @@ export const state = () => ({
           `,
         },
       ],
+      projectSummary: {},
     },
     {
       id: "AboutMe",
@@ -238,7 +239,7 @@ export const state = () => ({
       ],
     },
     {
-      id: "What is my team?",
+      id: "WhatIsMyTeam",
       title: "What is my team?",
       category: "Personal",
       img: "images/personal/what-is-my-team.png",
@@ -478,12 +479,12 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "기업개편",
-          img: "images/company/기업개편.png",
+          img: "images/company/기업개편2.png",
         },
         {
           id: uuidv4(),
           title: "기업개편",
-          img: "images/company/기업개편.png",
+          img: "images/company/기업개편3.png",
         },
       ],
       projectDetails: [
@@ -527,12 +528,12 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "관심기업서비스",
-          img: "images/company/관심기업서비스개편.png",
+          img: "images/company/관심기업서비스개편2.png",
         },
         {
           id: uuidv4(),
           title: "관심기업서비스",
-          img: "images/company/관심기업서비스개편.png",
+          img: "images/company/관심기업서비스개편3.png",
         },
       ],
       projectDetails: [
@@ -567,17 +568,17 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "이력서자격증네이버연동",
-          img: "images/company/이력서자격증네이버연동",
+          img: "images/company/이력서자격증네이버연동.png",
         },
         {
           id: uuidv4(),
           title: "이력서자격증네이버연동",
-          img: "images/company/이력서자격증네이버연동",
+          img: "images/company/이력서자격증네이버연동2.png",
         },
         {
           id: uuidv4(),
           title: "이력서자격증네이버연동",
-          img: "images/company/이력서자격증네이버연동",
+          img: "images/company/이력서자격증네이버연동3.png",
         },
       ],
       projectDetails: [
@@ -687,12 +688,12 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "이력서유도레이어",
-          img: "images/company/이력서유도레이어.png",
+          img: "images/company/이력서유도레이어2.png",
         },
         {
           id: uuidv4(),
           title: "이력서유도레이어",
-          img: "images/company/이력서유도레이어.png",
+          img: "images/company/이력서유도레이어3.png",
         },
       ],
       projectDetails: [
