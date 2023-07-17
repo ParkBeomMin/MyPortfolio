@@ -8,7 +8,7 @@ export const state = () => ({
       id: "기업분석리포트개편",
       title: "기업분석 리포트 개편",
       category: "Company",
-      img: "images/company/기업분석리포트개편.png",
+      img: "images/company/thumbnail/기업분석리포트개편.png",
       publishDate: "Jul 17, 2023",
       tag: "Vue Nuxt Javascript",
       objectivesTitle: "Objective",
@@ -19,7 +19,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "기업분석리포트개편",
-          img: "images/company/기업분석리포트개편.png",
+          img: "images/company/thumbnail/기업분석리포트개편.png",
         },
         {
           id: uuidv4(),
@@ -80,6 +80,7 @@ export const state = () => ({
           img: "images/personal/AboutMe3.png",
         },
       ],
+      workPeriod: "2023.06.26 ~ 07.17",
       projectDetails: [
         {
           id: uuidv4(),
@@ -101,7 +102,7 @@ export const state = () => ({
       id: "채용상세개편",
       title: "채용 상세 개편",
       category: "Company",
-      img: "images/company/채용상세개편.png",
+      img: "images/company/thumbnail/채용상세개편.png",
       publishDate: "Jun 30, 2023",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
@@ -112,7 +113,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "채용상세개편",
-          img: "images/company/채용상세개편.png",
+          img: "images/company/thumbnail/채용상세개편.png",
         },
         {
           id: uuidv4(),
@@ -125,6 +126,7 @@ export const state = () => ({
           img: "images/company/채용상세개편3.png",
         },
       ],
+      workPeriod: "2023.06.20 ~ 06.30",
       projectDetails: [
         {
           id: uuidv4(),
@@ -147,8 +149,8 @@ export const state = () => ({
       id: "건강보험공단 경력 연동 서비스",
       title: "건강보험공단 경력 연동 서비스",
       category: "Company",
-      img: "images/company/건강보험공단경력연동서비스.png",
-      publishDate: "Dec 26, 2022",
+      img: "images/company/thumbnail/건강보험공단경력연동서비스.png",
+      publishDate: "Jun 18, 2023",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
       objectivesDetails:
@@ -158,7 +160,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "건강보험공단경력연동서비스",
-          img: "images/company/건강보험공단경력연동서비스.png",
+          img: "images/company/thumbnail/건강보험공단경력연동서비스.png",
         },
         {
           id: uuidv4(),
@@ -171,6 +173,7 @@ export const state = () => ({
           img: "images/company/건강보험공단경력연동서비스3.png",
         },
       ],
+      workPeriod: "2023.05.17 ~ 06.19",
       projectDetails: [
         {
           id: uuidv4(),
@@ -195,7 +198,7 @@ export const state = () => ({
       id: "면접AI튜터서비스",
       title: "면접AI 튜터 서비스",
       category: "Company",
-      img: "images/company/면접AI튜터서비스.png",
+      img: "images/company/thumbnail/면접AI튜터서비스.png",
       publishDate: "May 16, 2023",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
@@ -206,7 +209,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "면접AI튜터서비스",
-          img: "images/company/면접AI튜터서비스.png",
+          img: "images/company/thumbnail/면접AI튜터서비스.png",
         },
         {
           id: uuidv4(),
@@ -219,6 +222,7 @@ export const state = () => ({
           img: "images/company/면접AI튜터서비스3.png",
         },
       ],
+      workPeriod: "2023.04.18 ~ 05.16",
       projectDetails: [
         {
           id: uuidv4(),
@@ -332,7 +336,7 @@ export const state = () => ({
       id: "채용유지보수",
       title: "채용 유지보수",
       category: "Company",
-      img: "images/company/채용유지보수.png",
+      img: "images/company/thumbnail/채용유지보수.png",
       publishDate: "Feb 17, 2023",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
@@ -342,7 +346,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "채용유지보수",
-          img: "images/company/채용유지보수.png",
+          img: "images/company/thumbnail/채용유지보수.png",
         },
         {
           id: uuidv4(),
@@ -355,6 +359,7 @@ export const state = () => ({
           img: "images/company/채용유지보수3.png",
         },
       ],
+      workPeriod: "2023.02.13 ~ 02.17",
       projectDetails: [
         {
           id: uuidv4(),
@@ -377,7 +382,7 @@ export const state = () => ({
       id: "즉시지원레이어유지보수",
       title: "즉시지원 레이어 유지보수",
       category: "Company",
-      img: "images/company/즉시지원레이어유지보수.png",
+      img: "images/company/thumbnail/즉시지원레이어유지보수.png",
       publishDate: "Feb 03, 2023",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
@@ -388,7 +393,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "즉시지원레이어유지보수",
-          img: "images/company/즉시지원레이어유지보수.png",
+          img: "images/company/thumbnail/즉시지원레이어유지보수.png",
         },
         {
           id: uuidv4(),
@@ -401,6 +406,7 @@ export const state = () => ({
           img: "images/company/즉시지원레이어유지보수3.png",
         },
       ],
+      workPeriod: "2023.01.30 ~ 02.03",
       projectDetails: [
         {
           id: uuidv4(),
@@ -417,7 +423,7 @@ export const state = () => ({
       id: "공고지원자관리개편",
       title: "공고/지원자 관리 개편",
       category: "Company",
-      img: "images/company/공고지원자관리개편.png",
+      img: "images/company/thumbnail/공고지원자관리개편.png",
       publishDate: "Dec 26, 2022",
       tag: "Vue Node Javascript",
       objectivesTitle: "Objective",
@@ -427,7 +433,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "공고지원자관리개편",
-          img: "images/company/공고지원자관리개편.png",
+          img: "images/company/thumbnail/공고지원자관리개편.png",
         },
         {
           id: uuidv4(),
@@ -440,6 +446,7 @@ export const state = () => ({
           img: "images/company/공고지원자관리개편3.png",
         },
       ],
+      workPeriod: "2022.12.02 ~ 12.26",
       projectDetails: [
         {
           id: uuidv4(),
@@ -463,7 +470,7 @@ export const state = () => ({
       id: "기업개편",
       title: "기업 개편",
       category: "Company",
-      img: "images/company/기업개편.png",
+      img: "images/company/thumbnail/기업개편.png",
       publishDate: "Sep 15, 2022",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
@@ -474,7 +481,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "기업개편",
-          img: "images/company/기업개편.png",
+          img: "images/company/thumbnail/기업개편.png",
         },
         {
           id: uuidv4(),
@@ -487,6 +494,7 @@ export const state = () => ({
           img: "images/company/기업개편3.png",
         },
       ],
+      workPeriod: "2022.09.01 ~ 09.15",
       projectDetails: [
         {
           id: uuidv4(),
@@ -512,7 +520,7 @@ export const state = () => ({
       id: "관심기업서비스",
       title: "관심기업 서비스",
       category: "Company",
-      img: "images/company/관심기업서비스개편.png",
+      img: "images/company/thumbnail/관심기업서비스개편.png",
       publishDate: "Jan 14, 2022",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
@@ -523,7 +531,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "관심기업서비스",
-          img: "images/company/관심기업서비스개편.png",
+          img: "images/company/thumbnail/관심기업서비스개편.png",
         },
         {
           id: uuidv4(),
@@ -536,6 +544,7 @@ export const state = () => ({
           img: "images/company/관심기업서비스개편3.png",
         },
       ],
+      workPeriod: "2021.12.23 ~ 2022.01.14",
       projectDetails: [
         {
           id: uuidv4(),
@@ -558,7 +567,7 @@ export const state = () => ({
       id: "이력서자격증네이버연동",
       title: "이력서 자격증 네이버연동",
       category: "Company",
-      img: "images/company/이력서자격증네이버연동.png",
+      img: "images/company/thumbnail/이력서자격증네이버연동.png",
       publishDate: "Nov 05, 2021",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
@@ -568,7 +577,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "이력서자격증네이버연동",
-          img: "images/company/이력서자격증네이버연동.png",
+          img: "images/company/thumbnail/이력서자격증네이버연동.png",
         },
         {
           id: uuidv4(),
@@ -581,6 +590,7 @@ export const state = () => ({
           img: "images/company/이력서자격증네이버연동3.png",
         },
       ],
+      workPeriod: "2021.10.25 ~ 11.05",
       projectDetails: [
         {
           id: uuidv4(),
@@ -597,7 +607,7 @@ export const state = () => ({
       id: "이력서소분류보유기술추가",
       title: "이력서 소분류, 보유기술 항목 추가",
       category: "Company",
-      img: "images/company/이력서소분류보유기술추가.png",
+      img: "images/company/thumbnail/이력서소분류보유기술추가.png",
       publishDate: "Aug 09, 2021",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
@@ -607,7 +617,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "이력서소분류보유기술추가",
-          img: "images/company/이력서소분류보유기술추가.png",
+          img: "images/company/thumbnail/이력서소분류보유기술추가.png",
         },
         {
           id: uuidv4(),
@@ -620,6 +630,27 @@ export const state = () => ({
           img: "images/company/이력서소분류보유기술추가3.png",
         },
       ],
+      workPeriod: "2021.07.26 ~ 08.09",
+      needs: {
+        id: uuidv4(),
+        title: "NEEDS",
+        contents:
+          "기존 직무 분류 체계에 소분류 체계 추가로 인한 소분류 선택 기능 추가",
+      },
+      problem: {
+        id: uuidv4(),
+        title: "problem",
+        contents: [
+          "기존 직무의 경우 중복 선택 가능하지만 데이터가 한 컬럼에 콤마 스트링으로 관리됨",
+          "데이터를 불러온 뒤 프론트단에서 이중 for문으로 변환해주는 작업이 곳곳에 있음",
+        ],
+      },
+      howToFix: {
+        id: uuidv4(),
+        title: "how to fix",
+        contents:
+          "유지보수에 용이하도록 직무 데이터를 프론트에서 바로 쓸 수 있도록 DB 단에서 리턴되게 수정함",
+      },
       projectDetails: [
         {
           id: uuidv4(),
@@ -631,7 +662,7 @@ export const state = () => ({
       id: "마이페이지개편",
       title: "마이페이지 개편",
       category: "Company",
-      img: "images/company/마이페이지개편.png",
+      img: "images/company/thumbnail/마이페이지개편.png",
       publishDate: "Jun 09, 2021",
       tag: "Vue Nuxt Node Javascript",
       objectivesTitle: "Objective",
@@ -642,7 +673,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "마이페이지개편",
-          img: "images/company/마이페이지개편.png",
+          img: "images/company/thumbnail/마이페이지개편.png",
         },
         {
           id: uuidv4(),
@@ -655,6 +686,7 @@ export const state = () => ({
           img: "images/company/마이페이지개편3.png",
         },
       ],
+      workPeriod: "2021.04.19 ~ 06.09",
       projectDetails: [
         {
           id: uuidv4(),
@@ -672,18 +704,18 @@ export const state = () => ({
       id: "이력서유도레이어서비스",
       title: "이력서 유도레이어 서비스",
       category: "Company",
-      img: "images/company/이력서유도레이어.png",
+      img: "images/company/thumbnail/이력서유도레이어.png",
       publishDate: "Feb 08, 2021",
       tag: "Vue Nuxt Node Javascript",
-      objectivesTitle: "Objective",
-      objectivesDetails:
-        "이력서의 필수항목들을 입력할 수 있게 유도하여 이력서 DB 질적 향상",
-      detailsTitle: "Detail",
+      // objectivesTitle: "Objective",
+      // objectivesDetails:
+      //   "이력서의 필수항목들을 입력할 수 있게 유도하여 이력서 DB 질적 향상",
+      // detailsTitle: "Detail",
       projectImages: [
         {
           id: uuidv4(),
           title: "이력서유도레이어",
-          img: "images/company/이력서유도레이어.png",
+          img: "images/company/thumbnail/이력서유도레이어.png",
         },
         {
           id: uuidv4(),
@@ -696,33 +728,57 @@ export const state = () => ({
           img: "images/company/이력서유도레이어3.png",
         },
       ],
-      projectDetails: [
-        {
-          id: uuidv4(),
-          details: `
-            사용자의 이력서 작성 상태를 파악하여 단계별로 이력서 필수값을 입력할 수 있도록 레이어를 노출시켜주는 서비스입니다.  
-            <br>레이어 컴포넌트안에서 사용자의 작성 상태에 따라 컴포넌트를 다르게 보여주도록 구성했습니다. 작성 상태에 대한 값은 초기 개발때는 사용자의 모든 이력서 데이터를 가져와서 프론트단에서 계산을 해서 보여주는 방식이었는데 코드의 가독성과 성능적인 부분을 고려해 쿼리단에서 단계값만 리턴해줄 수 있도록 수정하였습니다.
-            <br>유도레이어는 사이트 곳곳에서 사용되는 특성이 있어서 레이아웃 또는 푸터와 같이 공통적으로 쓰이는 곳에 컴포넌트를 등록시킨 뒤, nuxt 이벤트버스에 레이어 호출 함수를 등록시켜 어디서든 호출하기 쉽도록 했습니다.
-            <br>사이트 곳곳에서 사용되다보니 유도레이어 이후 이벤트들이 각각 달라서 그에 따른 예외처리 코드들이 늘어나게 되었습니다. 이벤트버스로 등록시킨 유도레이어 호출 함수에 callback 변수를 추가하여 유도레이어가 완료되었거나 닫혔을 때에 대해 callback함수를 받을 수 있도록 수정하였습니다.
-          `,
-        },
-      ],
+      workPeriod: "2021.01.22 ~ 02.08",
+      needs: {
+        id: uuidv4(),
+        title: "NEEDS",
+        contents:
+          "사용자의 이력서 작성 상태에 따라 이력서 필수값을 입력할 수 있도록 유도하는 레이어 노출",
+      },
+      problem: {
+        id: uuidv4(),
+        title: "problem",
+        contents: [
+          "필요한 데이터를 모두 가져와서 프론트단에서 호출 여부 및 단계를 계산하도록 되어 있어서 성능 이슈와 코드의 가독성 이슈가 발생함",
+          "이력서 유도레이어는 한 곳에서만 쓰이지 않고 사이트 곳곳에서 쓰일 가능성이 높음",
+        ],
+      },
+      howToFix: {
+        id: uuidv4(),
+        title: "how to fix",
+        contents: [
+          "쿼리단에서 단계와 그에 맞는 데이터를 리턴해줄 수 있도록 수정함",
+          "nuxt의 이벤트버스에 레이어 호출 함수를 등록하고 공통 레이아웃 또는 푸터에 컴포넌트를 등록하여 어디서든 호출할 수 있도록 함",
+          "레이어 내 callback함수를 인자로 받을 수 있게 하여 유도레이어 종료 시 callback함수가 호출될 수 있도록 함",
+        ],
+      },
+      // projectDetails: [
+      //   {
+      //     id: uuidv4(),
+      //     details: `
+      //       사용자의 이력서 작성 상태를 파악하여 단계별로 이력서 필수값을 입력할 수 있도록 레이어를 노출시켜주는 서비스입니다.
+      //       <br>레이어 컴포넌트안에서 사용자의 작성 상태에 따라 컴포넌트를 다르게 보여주도록 구성했습니다. 작성 상태에 대한 값은 초기 개발때는 사용자의 모든 이력서 데이터를 가져와서 프론트단에서 계산을 해서 보여주는 방식이었는데 코드의 가독성과 성능적인 부분을 고려해 쿼리단에서 단계값만 리턴해줄 수 있도록 수정하였습니다.
+      //       <br>유도레이어는 사이트 곳곳에서 사용되는 특성이 있어서 레이아웃 또는 푸터와 같이 공통적으로 쓰이는 곳에 컴포넌트를 등록시킨 뒤, nuxt 이벤트버스에 레이어 호출 함수를 등록시켜 어디서든 호출하기 쉽도록 했습니다.
+      //       <br>사이트 곳곳에서 사용되다보니 유도레이어 이후 이벤트들이 각각 달라서 그에 따른 예외처리 코드들이 늘어나게 되었습니다. 이벤트버스로 등록시킨 유도레이어 호출 함수에 callback 변수를 추가하여 유도레이어가 완료되었거나 닫혔을 때에 대해 callback함수를 받을 수 있도록 수정하였습니다.
+      //     `,
+      //   },
+      // ],
     },
     {
       id: "최종합격꿀팁개편",
       title: "최종합격꿀팁 개편",
       category: "Company",
-      img: "images/company/최종합격꿀팁개편.png",
+      img: "images/company/thumbnail/최종합격꿀팁개편.png",
       publishDate: "Dec 08, 2020",
       tag: "Vue Nuxt Node Javascript",
-      objectivesTitle: "Objective",
-      objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
-      detailsTitle: "Detail",
+      // objectivesTitle: "Objective",
+      // objectivesDetails: "합격꿀팁 작성 편의성 증대<br/>가독 편의성 향상",
+      // detailsTitle: "Detail",
       projectImages: [
         {
           id: uuidv4(),
           title: "최종합격꿀팁개편",
-          img: "images/company/최종합격꿀팁개편.png",
+          img: "images/company/thumbnail/최종합격꿀팁개편.png",
         },
         {
           id: uuidv4(),
@@ -735,20 +791,42 @@ export const state = () => ({
           img: "images/company/최종합격꿀팁개편3.png",
         },
       ],
-      projectDetails: [
-        {
-          id: uuidv4(),
-          details: `합격 후기 작성 페이지 및 상세 페이지를 개편한 프로젝트입니다.
-          <br>작성 페이지의 각 항목들이 변경됨에 따라 데이터 구조도 바뀌게 되어 이전 데이터들이 상세 페이지에 노출될 때 예외 처리가 필요했습니다.
-          <br>합격후기데이터들을 가져와서 component에서 뿌려지기 전에 computed에서 값을 검증하여 NULL 또는 undefined가 되지 않도록 처리했습니다.`,
-        },
-        {
-          id: uuidv4(),
-          details: `이 프로젝트에서 바뀐 데이터 구조로 인해 반복적인 데이터 delete, insert가 발생하게 되었는데, forEach문으로 구현이 되어 비동기적으로 처리가 되며 데이터가 누락되는 문제 상황이 있었습니다.
-            <br>forEach의 경우 async, await문으로 제어가 안되기때문에 발생하는 문제였습니다.
-            <br>for문으로 처리하거나 쿼리문으로 처리하는 방법 중 통신 횟수를 줄이기 위해 쿼리문에서 OpenJson을 활용하여 해결했습니다.`,
-        },
-      ],
+      workPeriod: "2020.12.01 ~ 12.08",
+      needs: {
+        id: uuidv4(),
+        title: "NEEDS",
+        contents: "합격 후기 작성 페이지 항목 변경 및 추가",
+      },
+      problem: {
+        id: uuidv4(),
+        title: "problem",
+        contents: [
+          "데이터 구조 변경으로 인해 기존 데이터 노출 예외 필요",
+          "forEach문을 통한 데이터 비동기 처리로 데이터가 누락되는 문제 발생",
+        ],
+      },
+      howToFix: {
+        id: uuidv4(),
+        title: "how to fix",
+        contents: [
+          "데이터가 화면에 뿌려지기 전에 computed에서 값을 검증하여 NULL 또는 undefined가 되지 않도록 처리함",
+          "forEach문이 아닌 for문을 통한 비동기처리로도 해결 가능 했지만, 통신 횟수를 줄이기 위해 쿼리문에서 OpenJson 구문을 활용함",
+        ],
+      },
+      // projectDetails: [
+      //   {
+      //     id: uuidv4(),
+      //     details: `합격 후기 작성 페이지 및 상세 페이지를 개편한 프로젝트입니다.
+      //     <br>작성 페이지의 각 항목들이 변경됨에 따라 데이터 구조도 바뀌게 되어 이전 데이터들이 상세 페이지에 노출될 때 예외 처리가 필요했습니다.
+      //     <br>합격후기데이터들을 가져와서 component에서 뿌려지기 전에 computed에서 값을 검증하여 NULL 또는 undefined가 되지 않도록 처리했습니다.`,
+      //   },
+      //   {
+      //     id: uuidv4(),
+      //     details: `이 프로젝트에서 바뀐 데이터 구조로 인해 반복적인 데이터 delete, insert가 발생하게 되었는데, forEach문으로 구현이 되어 비동기적으로 처리가 되며 데이터가 누락되는 문제 상황이 있었습니다.
+      //       <br>forEach의 경우 async, await문으로 제어가 안되기때문에 발생하는 문제였습니다.
+      //       <br>for문으로 처리하거나 쿼리문으로 처리하는 방법 중 통신 횟수를 줄이기 위해 쿼리문에서 OpenJson을 활용하여 해결했습니다.`,
+      //   },
+      // ],
     },
     // {
     //   id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdc",
