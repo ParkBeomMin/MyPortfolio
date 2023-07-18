@@ -1,6 +1,8 @@
 <script>
 import feather from "feather-icons";
 import Portfolio from "~/components/download/Portfolio";
+import html2canvas from "html2canvas";
+import { jsPDF } from "jspdf";
 export default {
   components: {
     Portfolio,
@@ -9,6 +11,7 @@ export default {
     return {
       // Todo
       initBody: "",
+      isShowPortfolio: false,
     };
   },
 
@@ -20,6 +23,56 @@ export default {
   },
   methods: {
     download() {
+      const pdf = jsPDF("l", "mm", "a4");
+      var width = pdf.internal.pageSize.getWidth();
+      var height = pdf.internal.pageSize.getHeight();
+      var canvas = document.createElement("canvas");
+      var context = canvas.getContext("2d");
+      const img = new Image(); // Create new img element
+      img.src = "/images/company/thumbnail/기업개편.png"; // Set source path
+      canvas.width = img.width;
+      canvas.height = img.height;
+      context.drawImage(img, 0, 0);
+      var myData = context.getImageData(0, 0, img.width, img.height);
+      pdf.addImage(myData, "PNG", 1, 1, width, height);
+      pdf.save("test");
+      return;
+      this.isShowPortfolio = true;
+      // const doc = new jsPDF({
+      //   //orientation: "landscape",
+      //   orientation: "portrait",
+      //   //format: "a4"
+      //   format: [4, 2],
+      // });
+      // doc.html(this.$refs.portfolio.$el, {
+      //   callback: function () {
+      //     doc.save("html.pdf");
+      //   },
+      // });
+      var canvas = document.createElement("canvas");
+      canvas.width = 1920;
+      canvas.height = 1280;
+      html2canvas(this.$refs.portfolio.$el, {
+        canvas,
+        scale: 1.2,
+        width: 1920,
+        height: 1280,
+        windowWidth: 1920,
+        windowHeight: 1280,
+      }).then((canvas) => {
+        console.log(canvas);
+        const imgData = canvas.toDataURL("image/png");
+        console.log(imgData);
+        var pdf = new jsPDF("l", "mm", "a4");
+
+        var width = pdf.internal.pageSize.getWidth();
+        var height = pdf.internal.pageSize.getHeight();
+
+        pdf.addImage(imgData, "PNG", 1, 1, width, height);
+        pdf.save("test");
+        // this.isShowPortfolio = false;
+      });
+      return;
       window.onbeforeprint = this.beforePrint;
       window.onafterprint = this.afterPrint;
       window.print();
@@ -142,6 +195,7 @@ export default {
             text-gray-500
             hover:text-white
             duration-500
+            z-0
           "
           aria-label="Download Career Descrition"
           @click.prevent="download"
@@ -166,7 +220,7 @@ export default {
       />
       <img v-else src="~/static/developer.jpg" alt="Developer Light" />
     </div>
-    <portfolio ref="portfolio" v-show="false" />
+    <portfolio class="absolute" ref="portfolio" v-show="isShowPortfolio" />
   </section>
 </template>
 
