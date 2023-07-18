@@ -75,7 +75,7 @@ export const state = () => ({
       id: "AboutMe",
       title: "About Me",
       category: "Personal",
-      img: "images/personal/AboutMe.png",
+      img: "images/personal/thumbnail/AboutMe.png",
       publishDate: "Jul 02, 2023",
       tag: "Javascript",
       // objectivesTitle: "Objective",
@@ -88,7 +88,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "About Me",
-          img: "images/personal/AboutMe.png",
+          img: "images/personal/thumbnail/AboutMe.png",
         },
         {
           id: uuidv4(),
@@ -359,7 +359,7 @@ export const state = () => ({
       id: "WhatIsMyTeam",
       title: "What is my team?",
       category: "Personal",
-      img: "images/personal/what-is-my-team.png",
+      img: "images/personal/thumbnail/what-is-my-team.png",
       publishDate: "-",
       tag: "Vue Typescript",
       // objectivesTitle: "Objective",
@@ -370,7 +370,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "What is my team?",
-          img: "images/personal/what-is-my-team.png",
+          img: "images/personal/thumbnail/what-is-my-team.png",
         },
         {
           id: uuidv4(),
@@ -425,7 +425,7 @@ export const state = () => ({
       id: "진학사 조식봇",
       title: "진학사 조식봇",
       category: "Personal",
-      img: "images/personal/조식봇.png",
+      img: "images/personal/thumbnail/조식봇.png",
       publishDate: "Feb 22, 2023",
       tag: "Vue Node Javascript",
       link: "https://pf.kakao.com/_Qaxaxaxj",
@@ -437,7 +437,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "진학사 조식봇",
-          img: "images/personal/조식봇.png",
+          img: "images/personal/thumbnail/조식봇.png",
         },
         {
           id: uuidv4(),
