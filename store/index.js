@@ -1706,7 +1706,7 @@ export const state = () => ({
       팀 내 DX(Developer Experience) 향상을 위해 노력합니다.
       <br><br>
       함께 일하는 동료와 유저 모두를 아우를 수 있는 개발자가 되기 위해
-      오늘도 어디선가 최선을 다하고 있습니다.`,
+      <br>오늘도 어디선가 최선을 다하고 있습니다.`,
     },
   ],
   copyrightDate: new Date().getFullYear(),
