@@ -171,7 +171,15 @@
       </div>
 
       <!-- Single project right section details -->
-      <div class="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
+      <div class="flex flex-col w-full sm:w-2/3 text-left mt-10 sm:mt-0">
+        <project-section v-if="project.needs" :data="project.needs" />
+        <project-section v-if="project.problem" :data="project.problem" />
+        <project-section v-if="project.howToFix" :data="project.howToFix" />
+      </div>
+      <div
+        v-if="project.detailsTitle"
+        class="w-full sm:w-2/3 text-left mt-10 sm:mt-0"
+      >
         <p
           class="
             font-general-medium
@@ -204,9 +212,13 @@
 </template>
 
 <script>
+import ProjectSection from "./ProjectSection.vue";
 export default {
   props: {
     project: { type: Object, default: () => ({}) },
+  },
+  components: {
+    ProjectSection,
   },
 };
 </script>
