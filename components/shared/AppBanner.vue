@@ -3,6 +3,9 @@ import feather from "feather-icons";
 import Portfolio from "~/components/download/Portfolio";
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
+import axios from "axios";
+import { mapState } from "vuex";
+
 export default {
   components: {
     Portfolio,
@@ -14,6 +17,9 @@ export default {
       isShowPortfolio: false,
     };
   },
+  computed: {
+    ...mapState(["projects"]),
+  },
 
   mounted() {
     feather.replace();
@@ -22,22 +28,47 @@ export default {
     feather.replace();
   },
   methods: {
-    download() {
+    async download() {
       const pdf = jsPDF("l", "mm", "a4");
+      const ds = await axios.get("/malgun.txt");
+      console.log(ds.data);
+      pdf.addFileToVFS("malgun.ttf", ds.data); //_fonts 변수는 Base64 형태로 변환된 내용입니다.
+      pdf.addFont("malgun.ttf", "malgun", "normal");
+      pdf.setFont("malgun");
       var width = pdf.internal.pageSize.getWidth();
       var height = pdf.internal.pageSize.getHeight();
-      var canvas = document.createElement("canvas");
-      var context = canvas.getContext("2d");
-      const img = new Image(); // Create new img element
-      img.src = "/images/company/thumbnail/기업개편.png"; // Set source path
-      canvas.width = img.width;
-      canvas.height = img.height;
-      context.drawImage(img, 0, 0);
-      var myData = context.getImageData(0, 0, img.width, img.height);
-      pdf.addImage(myData, "PNG", 1, 1, width, height);
+
+      this.projects.forEach((project) => {
+        const canvas = document.createElement("canvas");
+        const context = canvas.getContext("2d");
+        const img = new Image(); // Create new img element
+        img.src = project.img; // Set source path
+        canvas.width = img.width;
+        canvas.height = img.height;
+        context.drawImage(img, 0, 0);
+        const myData = context.getImageData(0, 0, img.width, img.height);
+        pdf.addPage();
+        pdf.addImage(myData, "PNG", 0, 0, width, height);
+        pdf.addPage();
+        let y = 40;
+        const needs =
+          typeof project.needs.contents == "string"
+            ? project.needs.contents
+            : project.needs.contents.join("\n");
+        pdf.text(15, y, "NEEDS"); // 글씨입력(시작x, 시작y, 내용)
+        y += 10;
+        pdf.text(15, y, needs); // 글씨입력(시작x, 시작y, 내용)
+        y += 10;
+        const problem =
+          typeof project.problem.contents == "string"
+            ? project.problem.contents
+            : project.problem.contents.join("\n");
+        pdf.text(15, y, "PROBLEM"); // 글씨입력(시작x, 시작y, 내용)
+        y += 10;
+        pdf.text(15, y, problem); // 글씨입력(시작x, 시작y, 내용)
+      });
       pdf.save("test");
       return;
-      this.isShowPortfolio = true;
       // const doc = new jsPDF({
       //   //orientation: "landscape",
       //   orientation: "portrait",
