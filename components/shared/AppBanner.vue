@@ -39,7 +39,7 @@ export default {
 
       this.setImage({
         pdf,
-        imgUrl: "/profile.jpeg",
+        imgUrl: "/MyPortfolio/profile.jpeg",
         x: 10,
         y: 10,
         width: 100,
