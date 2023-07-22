@@ -1,6 +1,7 @@
 <template>
   <div>
     <projects-detail
+      style="height: 1280px; margin: auto"
       v-for="(project, i) in projects"
       :key="i"
       :project="project"

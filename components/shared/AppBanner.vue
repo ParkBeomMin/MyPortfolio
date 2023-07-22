@@ -1,6 +1,11 @@
 <script>
 import feather from "feather-icons";
 import Portfolio from "~/components/download/Portfolio";
+import html2canvas from "html2canvas";
+import { jsPDF } from "jspdf";
+import axios from "axios";
+import { mapState } from "vuex";
+
 export default {
   components: {
     Portfolio,
@@ -9,7 +14,11 @@ export default {
     return {
       // Todo
       initBody: "",
+      isShowPortfolio: false,
     };
+  },
+  computed: {
+    ...mapState(["projects", "aboutMe"]),
   },
 
   mounted() {
@@ -19,20 +28,77 @@ export default {
     feather.replace();
   },
   methods: {
-    download() {
-      window.onbeforeprint = this.beforePrint;
-      window.onafterprint = this.afterPrint;
-      window.print();
-      window.onbeforeprint = window.onafterprint = null;
-    },
-    beforePrint() {
-      const prtContent = this.$refs.portfolio.$el;
-      this.initBody = document.body.innerHTML;
-      document.body.innerHTML = prtContent.innerHTML;
-    },
+    async download() {
+      const pdf = jsPDF("l", "mm", "a4");
+      const ds = await axios.get("/malgun.txt");
+      pdf.addFileToVFS("malgun.ttf", ds.data); //_fonts 변수는 Base64 형태로 변환된 내용입니다.
+      pdf.addFont("malgun.ttf", "malgun", "normal");
+      pdf.setFont("malgun");
+      const width = pdf.internal.pageSize.getWidth();
+      const height = pdf.internal.pageSize.getHeight();
 
-    afterPrint() {
-      document.body.innerHTML = this.initBody;
+      this.setImage({
+        pdf,
+        imgUrl: "/profile.jpeg",
+        x: 10,
+        y: 10,
+        width: 100,
+        height: 150,
+      });
+      pdf.text(
+        120,
+        15,
+        this.aboutMe[0].bio.replace(/\<br\>/g, "\n").replace(/\<\/?b\>/g, ""),
+        {
+          maxWidth: width - 130,
+        }
+      );
+
+      this.projects.forEach((project, i) => {
+        pdf.addPage();
+        this.setImage({ pdf, imgUrl: project.img, width, height });
+        pdf.addPage();
+        let y = 40;
+        const margin = 15;
+        const textOption = {
+          maxWidth: width - margin,
+        };
+        const needs =
+          typeof project.needs.contents == "string"
+            ? project.needs.contents
+            : project.needs.contents.join("\n");
+        pdf.text(margin, y, "NEEDS"); // 글씨입력(시작x, 시작y, 내용)
+        y += 10;
+        pdf.text(margin, y, needs, textOption); // 글씨입력(시작x, 시작y, 내용)
+        y += 30;
+        const problem =
+          typeof project.problem.contents == "string"
+            ? project.problem.contents
+            : project.problem.contents.join("\n");
+        pdf.text(margin, y, "PROBLEM"); // 글씨입력(시작x, 시작y, 내용)
+        y += 10;
+        pdf.text(margin, y, problem, textOption); // 글씨입력(시작x, 시작y, 내용)
+        y += 30;
+        const howToFix =
+          typeof project.howToFix.contents == "string"
+            ? project.howToFix.contents
+            : project.howToFix.contents.join("\n");
+        pdf.text(margin, y, "HOW TO FIX"); // 글씨입력(시작x, 시작y, 내용)
+        y += 10;
+        pdf.text(margin, y, howToFix, textOption); // 글씨입력(시작x, 시작y, 내용)
+      });
+      pdf.save("박범민_포트폴리오");
+    },
+    setImage({ pdf, imgUrl, width, height, x = 0, y = 0 }) {
+      const canvas = document.createElement("canvas");
+      const context = canvas.getContext("2d");
+      const img = new Image(); // Create new img element
+      img.src = imgUrl; // Set source path
+      canvas.width = img.width;
+      canvas.height = img.height;
+      context.drawImage(img, 0, 0);
+      const myData = context.getImageData(0, 0, img.width, img.height);
+      pdf.addImage(myData, "PNG", x, y, width, height);
     },
   },
 };
@@ -115,7 +181,7 @@ export default {
             class="ml-0 sm:ml-1 mr-2 sm:mr-3 w-5 sm:w-6 duration-100"
           ></i>
           <span class="text-sm sm:text-lg font-general-medium duration-100"
-            >Download CV</span
+            >Resume PDF</span
           ></a
         >
         <a
@@ -142,6 +208,7 @@ export default {
             text-gray-500
             hover:text-white
             duration-500
+            z-0
           "
           aria-label="Download Career Descrition"
           @click.prevent="download"
@@ -151,7 +218,7 @@ export default {
             class="ml-0 sm:ml-1 mr-2 sm:mr-3 w-5 sm:w-6 duration-100"
           />
           <span class="text-sm sm:text-lg font-general-medium duration-100">
-            Download Portfolio
+            Portfolio PDF
           </span>
         </a>
       </div>
@@ -166,7 +233,7 @@ export default {
       />
       <img v-else src="~/static/developer.jpg" alt="Developer Light" />
     </div>
-    <portfolio ref="portfolio" v-show="false" />
+    <portfolio class="absolute" ref="portfolio" v-show="isShowPortfolio" />
   </section>
 </template>
 
