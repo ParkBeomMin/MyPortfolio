@@ -37,14 +37,14 @@ export default {
       const width = pdf.internal.pageSize.getWidth();
       const height = pdf.internal.pageSize.getHeight();
 
-      this.setImage({
-        pdf,
-        imgUrl: "/MyPortfolio/profile.jpeg",
-        x: 10,
-        y: 10,
-        width: 100,
-        height: 150,
-      });
+      // this.setImage({
+      //   pdf,
+      //   imgUrl: "/MyPortfolio/profile.jpeg",
+      //   x: 10,
+      //   y: 10,
+      //   width: 100,
+      //   height: 150,
+      // });
       pdf.text(
         120,
         15,
