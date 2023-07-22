@@ -94,6 +94,7 @@ export default {
       const context = canvas.getContext("2d");
       const img = new Image(); // Create new img element
       img.src = imgUrl; // Set source path
+      console.log(img);
       canvas.width = img.width;
       canvas.height = img.height;
       context.drawImage(img, 0, 0);
