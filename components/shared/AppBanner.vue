@@ -18,7 +18,7 @@ export default {
     };
   },
   computed: {
-    ...mapState(["projects"]),
+    ...mapState(["projects", "aboutMe"]),
   },
 
   mounted() {
@@ -31,92 +31,74 @@ export default {
     async download() {
       const pdf = jsPDF("l", "mm", "a4");
       const ds = await axios.get("/malgun.txt");
-      console.log(ds.data);
       pdf.addFileToVFS("malgun.ttf", ds.data); //_fonts 변수는 Base64 형태로 변환된 내용입니다.
       pdf.addFont("malgun.ttf", "malgun", "normal");
       pdf.setFont("malgun");
-      var width = pdf.internal.pageSize.getWidth();
-      var height = pdf.internal.pageSize.getHeight();
+      const width = pdf.internal.pageSize.getWidth();
+      const height = pdf.internal.pageSize.getHeight();
 
-      this.projects.forEach((project) => {
-        const canvas = document.createElement("canvas");
-        const context = canvas.getContext("2d");
-        const img = new Image(); // Create new img element
-        img.src = project.img; // Set source path
-        canvas.width = img.width;
-        canvas.height = img.height;
-        context.drawImage(img, 0, 0);
-        const myData = context.getImageData(0, 0, img.width, img.height);
+      this.setImage({
+        pdf,
+        imgUrl: "/profile.jpeg",
+        x: 10,
+        y: 10,
+        width: 100,
+        height: 150,
+      });
+      pdf.text(
+        120,
+        15,
+        this.aboutMe[0].bio.replace(/\<br\>/g, "\n").replace(/\<\/?b\>/g, ""),
+        {
+          maxWidth: width - 130,
+        }
+      );
+
+      this.projects.forEach((project, i) => {
         pdf.addPage();
-        pdf.addImage(myData, "PNG", 0, 0, width, height);
+        this.setImage({ pdf, imgUrl: project.img, width, height });
         pdf.addPage();
         let y = 40;
+        const margin = 15;
+        const textOption = {
+          maxWidth: width - margin,
+        };
         const needs =
           typeof project.needs.contents == "string"
             ? project.needs.contents
             : project.needs.contents.join("\n");
-        pdf.text(15, y, "NEEDS"); // 글씨입력(시작x, 시작y, 내용)
+        pdf.text(margin, y, "NEEDS"); // 글씨입력(시작x, 시작y, 내용)
         y += 10;
-        pdf.text(15, y, needs); // 글씨입력(시작x, 시작y, 내용)
-        y += 10;
+        pdf.text(margin, y, needs, textOption); // 글씨입력(시작x, 시작y, 내용)
+        y += 30;
         const problem =
           typeof project.problem.contents == "string"
             ? project.problem.contents
             : project.problem.contents.join("\n");
-        pdf.text(15, y, "PROBLEM"); // 글씨입력(시작x, 시작y, 내용)
+        pdf.text(margin, y, "PROBLEM"); // 글씨입력(시작x, 시작y, 내용)
         y += 10;
-        pdf.text(15, y, problem); // 글씨입력(시작x, 시작y, 내용)
+        pdf.text(margin, y, problem, textOption); // 글씨입력(시작x, 시작y, 내용)
+        y += 30;
+        const howToFix =
+          typeof project.howToFix.contents == "string"
+            ? project.howToFix.contents
+            : project.howToFix.contents.join("\n");
+        pdf.text(margin, y, "HOW TO FIX"); // 글씨입력(시작x, 시작y, 내용)
+        y += 10;
+        pdf.text(margin, y, howToFix, textOption); // 글씨입력(시작x, 시작y, 내용)
       });
-      pdf.save("test");
-      return;
-      // const doc = new jsPDF({
-      //   //orientation: "landscape",
-      //   orientation: "portrait",
-      //   //format: "a4"
-      //   format: [4, 2],
-      // });
-      // doc.html(this.$refs.portfolio.$el, {
-      //   callback: function () {
-      //     doc.save("html.pdf");
-      //   },
-      // });
-      var canvas = document.createElement("canvas");
-      canvas.width = 1920;
-      canvas.height = 1280;
-      html2canvas(this.$refs.portfolio.$el, {
-        canvas,
-        scale: 1.2,
-        width: 1920,
-        height: 1280,
-        windowWidth: 1920,
-        windowHeight: 1280,
-      }).then((canvas) => {
-        console.log(canvas);
-        const imgData = canvas.toDataURL("image/png");
-        console.log(imgData);
-        var pdf = new jsPDF("l", "mm", "a4");
-
-        var width = pdf.internal.pageSize.getWidth();
-        var height = pdf.internal.pageSize.getHeight();
-
-        pdf.addImage(imgData, "PNG", 1, 1, width, height);
-        pdf.save("test");
-        // this.isShowPortfolio = false;
-      });
-      return;
-      window.onbeforeprint = this.beforePrint;
-      window.onafterprint = this.afterPrint;
-      window.print();
-      window.onbeforeprint = window.onafterprint = null;
+      pdf.save("박범민_포트폴리오");
     },
-    beforePrint() {
-      const prtContent = this.$refs.portfolio.$el;
-      this.initBody = document.body.innerHTML;
-      document.body.innerHTML = prtContent.innerHTML;
-    },
-
-    afterPrint() {
-      document.body.innerHTML = this.initBody;
+    setImage({ pdf, imgUrl, width, height, x = 0, y = 0 }) {
+      const canvas = document.createElement("canvas");
+      const context = canvas.getContext("2d");
+      const img = new Image(); // Create new img element
+      img.src = imgUrl; // Set source path
+      canvas.width = img.width;
+      canvas.height = img.height;
+      context.drawImage(img, 0, 0);
+      const myData = context.getImageData(0, 0, img.width, img.height);
+      pdf.addImage(myData, "PNG", x, y, width, height);
     },
   },
 };
@@ -199,7 +181,7 @@ export default {
             class="ml-0 sm:ml-1 mr-2 sm:mr-3 w-5 sm:w-6 duration-100"
           ></i>
           <span class="text-sm sm:text-lg font-general-medium duration-100"
-            >Download CV</span
+            >Resume PDF</span
           ></a
         >
         <a
@@ -236,7 +218,7 @@ export default {
             class="ml-0 sm:ml-1 mr-2 sm:mr-3 w-5 sm:w-6 duration-100"
           />
           <span class="text-sm sm:text-lg font-general-medium duration-100">
-            Download Portfolio
+            Portfolio PDF
           </span>
         </a>
       </div>
