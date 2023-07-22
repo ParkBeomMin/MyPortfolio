@@ -95,6 +95,8 @@ export default {
       const img = new Image(); // Create new img element
       img.src = imgUrl; // Set source path
       console.log(img);
+      console.log(img.width);
+      console.log(img.height);
       canvas.width = img.width;
       canvas.height = img.height;
       context.drawImage(img, 0, 0);
