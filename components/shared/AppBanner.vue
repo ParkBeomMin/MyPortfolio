@@ -30,7 +30,7 @@ export default {
   methods: {
     async download() {
       const pdf = jsPDF("l", "mm", "a4");
-      const ds = await axios.get("/malgun.txt");
+      const ds = await axios.get("/MyPortfolio/malgun.txt");
       pdf.addFileToVFS("malgun.ttf", ds.data); //_fonts 변수는 Base64 형태로 변환된 내용입니다.
       pdf.addFont("malgun.ttf", "malgun", "normal");
       pdf.setFont("malgun");
