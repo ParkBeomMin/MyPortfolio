@@ -21,15 +21,15 @@ export const state = () => ({
     },
     {
       name: "Vue",
-      description: ["SPA 구조 이해", "Component"],
+      description: ["SPA 구조 이해", "Component", "상태관리", ""],
     },
     {
       name: "Nuxt",
-      description: "",
+      description: "SSR",
     },
     {
       name: "Node",
-      description: "",
+      description: ["웹 서버", "캐싱", "RESTFul API", "MVC"],
     },
   ],
   careers: [
