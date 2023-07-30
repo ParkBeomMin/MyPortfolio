@@ -36,5 +36,7 @@ export default {
 }
 @page {
   size: A4;
+  margin: 16px 64px;
+  padding: 64px;
 }
 </style>

@@ -47,6 +47,7 @@ export default {
 }
 
 .summary {
+  font-size: 24px;
   font-weight: bold;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="section-container">
     <h1 class="line">{{ title }}</h1>
     <p v-html="content" />
     <slot />
@@ -16,6 +16,10 @@ export default {
 </script>
 
 <style scoped>
+.section-container {
+  margin-bottom: 64px;
+}
+
 h1 {
   font-size: 24px;
   font-weight: bold;

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>
+    <div class="info-container">
       <h1>{{ careerDescription.name }}</h1>
       <span>Frontend Engineer</span>
     </div>
@@ -48,3 +48,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.info-container h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+</style>
