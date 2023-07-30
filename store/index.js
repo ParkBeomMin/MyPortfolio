@@ -332,7 +332,7 @@ export const state = () => ({
         id: uuidv4(),
         title: "how to fix",
         contents: [
-          "프롬프트를 영문으로 변경하고 글자 수를 줄이며 프롬프트 최호화를 진행하였고, 타임아웃이 나지 않도록 nginx에서 해당 api에 대한 설정을 변경하여 처리함",
+          "프롬프트를 영문으로 변경하고 글자 수를 줄이며 프롬프트 최적화를 진행하였고, 타임아웃이 나지 않도록 nginx에서 해당 api에 대한 설정을 변경하여 처리함",
           `함수형 프로그래밍 패러다임 중 '하나의 함수는 한가지 역할만 해야한다', '함수를 통해 변수가 변질되면 안된다'를 지키며 구현을 하여 테스트 과정에서도 해당 함수만을 호출하여 확인될 수 있도록 함`,
         ],
       },
@@ -365,6 +365,7 @@ export const state = () => ({
       // objectivesTitle: "Objective",
       // objectivesDetails: "나의 관상은 EPL 프리미어리그 어느 팀에 어울릴까?",
       // detailsTitle: "Detail",
+      link: "https://what-is-my-team.web.app/",
       github: "https://github.com/ParkBeomMin/WhatIsMyTeam/",
       projectImages: [
         {
@@ -689,7 +690,7 @@ export const state = () => ({
       category: "Company",
       img: "images/company/thumbnail/기업개편.png",
       publishDate: "Sep 15, 2022",
-      tag: "Vue Nuxt Node Javascript",
+      tag: "Vue Nuxt Node Javascript Typescript",
       // objectivesTitle: "Objective",
       // objectivesDetails:
       //   "기업 전체 메뉴 중 활용도가 낮은 서비스의 전면적인 개편을 통한 UV/PV 증대<br/>가독성 및 사용성을 높일 수 있는 UI/UX 개선<br>변동성 있는 DB로 노출 콘텐츠 재구성",
