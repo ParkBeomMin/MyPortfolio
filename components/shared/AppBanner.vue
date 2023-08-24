@@ -187,7 +187,7 @@ export default {
             >Resume PDF</span
           ></a
         >
-        <a
+        <!-- <a
           href="javascript:void(0)"
           class="
             flex
@@ -223,7 +223,7 @@ export default {
           <span class="text-sm sm:text-lg font-general-medium duration-100">
             Portfolio PDF
           </span>
-        </a>
+        </a> -->
         <nuxt-link
           to="/careerDescription"
           class="
