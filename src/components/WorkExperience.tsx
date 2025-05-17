@@ -23,7 +23,7 @@ const WorkExperience = () => {
       <p className="text-sm text-gray-500 mb-4">총 경력 {totalCareerYears}년</p>
       <div className="space-y-6">
         {workExperience.map((experience, index) => (
-          <div key={index}>
+          <div key={index} className="bg-gray-100 p-4 rounded-md">
             <h4 className="text-lg font-semibold">
                 {experience?.logo && 
                 <a href={experience.companyUrl} target="_blank" rel="noopener noreferrer">

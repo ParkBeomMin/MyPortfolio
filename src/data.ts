@@ -22,10 +22,13 @@ export const about = `안녕하세요, 될 방법을 먼저 고민하는 웹 개
 그것이 제가 지향하는 개발자의 모습입니다.`
 
 
+import jinhakLogo from './assets/jinhak.svg';
 import catchLogo from './assets/catch.svg';
-
+import sbsiLogo from './assets/sbsi.svg';
 export const workExperience = [
   {
+    logo: jinhakLogo,
+    companyUrl: 'https://www.jinhaksa.co.kr/',
     company: '진학사',
     department: '신사업본부',
     startDate: '2019.12.02',
@@ -42,6 +45,8 @@ export const workExperience = [
     description: ['캐치 웹 서비스 유지보수 및 신규 기능 개발'],
   },
   {
+    logo: sbsiLogo,
+    companyUrl: 'https://sbsi.co.kr',
     company: 'SBSi',
     department: '플랫폼개발팀',
     startDate: '2023.10.10',
