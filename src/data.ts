@@ -43,6 +43,7 @@ export const workExperience = [
     startDate: '2020.9.29',
     endDate: '2023.10.11',
     description: ['캐치 웹 서비스 유지보수 및 신규 기능 개발'],
+    skills: ['Vue.js', 'Nuxt.js', 'Node.js', 'MSSQL'],
   },
   {
     logo: sbsiLogo,
@@ -51,7 +52,31 @@ export const workExperience = [
     department: '플랫폼개발팀',
     startDate: '2023.10.10',
     description: ['연합뉴스 플랫폼리포지션 사업 참여'],
+    skills: ['Vue.js', 'React', 'Next.js', 'Vanilla.js', 'Node.js', 'Spring Boot', 'Oracle', 'AWS'],
   },
 ]
 
+export const projects = [
+  {
+    title: 'What is my team?',
+    skills: ['Vue.js', 'teachable machine'],
+    description: '인공지능 모델을 활용한  팀 추천 서비스',
+    link: 'https://what-is-my-team.web.app/premier24-25',
+    github: 'https://github.com/ParkBeomMin/WhatIsMyTeam',
+  },
+  {
+    title: 'About me',
+    skills: ['Nuxt.js', 'Firebase Firestore'],
+    description: '친구들이 생각하는 나는 어떤 사람일까?',
+    link: 'https://aboutme2.web.app/',
+    github: 'https://github.com/ParkBeomMin/AboutMe-Nuxt',
+  },
+  {
+    title: 'Beomjeon',
+    skills: ['Next.js'],
+    description: '개발 지식 위키',
+    link: 'https://beomjeon-docs.vercel.app/',
+    github: 'https://github.com/ParkBeomMin/beomjeon/tree/main/apps/docs',
+  },
+]
 

@@ -33,6 +33,11 @@ const WorkExperience = () => {
                 {experience.company} | {experience.department}
             </h4>
             <p className="text-sm text-gray-500">{experience.startDate} ~ {experience.endDate}</p>
+            {experience?.skills && <div className="flex flex-wrap gap-2 mb-2 mt-2">
+                {experience?.skills?.map((skill, index) => (
+                    <span key={index} className="bg-gray-200 px-2 py-1 rounded-full text-sm">{skill}</span>
+                ))}
+            </div>}
             <ul className="list-disc pl-5 mt-2 text-sm text-gray-700 space-y-1">
                 {experience.description.map((description, jndex) => (
                     <li key={`${index}-${jndex}`}>{description}</li>

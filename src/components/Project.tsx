@@ -1,18 +1,23 @@
+import { projects } from '../data';
+
 const Project = () => {
   return (
     <section id="projects">
         <h3 className="text-2xl font-bold mb-4">Projects</h3>
         <div className="grid md:grid-cols-2 gap-6">
-        <div className="border rounded p-4 shadow">
-            <h4 className="font-semibold text-lg mb-2">통합회원 시스템</h4>
-            <p className="text-sm text-gray-600 mb-2">Next.js + OAuth2 기반 로그인 시스템 구축</p>
-            <a href="https://github.com/parkbeommin/project-a" className="text-blue-600 text-sm">🔗 GitHub</a>
-        </div>
-        <div className="border rounded p-4 shadow">
-            <h4 className="font-semibold text-lg mb-2">메인 서비스 개편</h4>
-            <p className="text-sm text-gray-600 mb-2">사용자 경험 기반 메인 UI 리디자인 및 퍼포먼스 최적화</p>
-            <a href="https://github.com/parkbeommin/project-b" className="text-blue-600 text-sm">🔗 GitHub</a>
-        </div>
+        {projects.map((project, index) => (
+            <div key={index} className="border rounded p-4 shadow">
+                <h4 className="font-semibold text-lg mb-2">{project.title}</h4>
+                <div className="flex flex-wrap gap-2 mb-2">
+                    {project.skills.map((skill, index) => (
+                        <span key={index} className="bg-gray-200 px-2 py-1 rounded-full text-sm">{skill}</span>
+                    ))}
+                </div>
+                <p className="text-sm text-gray-600 mb-2">{project.description}</p>
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-blue-600 text-sm">🔗 GitHub</a>
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 text-sm ml-2">🔗 배포 링크</a>
+            </div>
+        ))}
         </div>
     </section>
   );
