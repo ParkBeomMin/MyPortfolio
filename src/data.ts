@@ -80,3 +80,15 @@ export const projects = [
   },
 ]
 
+export const skills = [
+  'Vue.js',
+  'Nuxt.js',
+  'React',
+  'Next.js',
+  'Node.js',
+  'AWS',
+  'MSSQL',
+  'Oracle',
+  'Vanilla.js',
+  
+]
