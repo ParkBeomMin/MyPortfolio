@@ -51,6 +51,22 @@ export const workExperience = [
     company: 'SBSi',
     department: '플랫폼개발팀',
     startDate: '2023.10.10',
+    project: [{
+      title: '연합뉴스 플랫폼리포지션 사업 참여',
+      description: `
+      대규모 플랫폼 리포지션 사업에 PM으로 참여하여, 통합회원, 홈페이지, 관리자, 모바일 프로젝트를 기획/운영
+      - 연합뉴스 통합회원 서비스 개발
+      
+      - 연합뉴스 홈페이지 리뉴얼 프로젝트 참여
+      
+      - 연합뉴스 관리자 페이지 개발
+      
+      - 헬로아카이브 모바일 서비스 개발`,
+      date: '2023.10.10 ~ ',
+      skills: ['Vue.js', 'React', 'Next.js', 'Vanilla.js', 'Node.js', 'Spring Boot', 'Oracle', 'AWS'],
+      link: 'https://sbsi.co.kr',
+      github: 'https://github.com/ParkBeomMin/sbsi',
+    }],
     description: ['연합뉴스 플랫폼리포지션 사업 참여'],
     skills: ['Vue.js', 'React', 'Next.js', 'Vanilla.js', 'Node.js', 'Spring Boot', 'Oracle', 'AWS'],
   },
