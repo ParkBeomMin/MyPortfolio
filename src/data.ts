@@ -29,8 +29,20 @@ export const workExperience = [
   {
     logo: jinhakLogo,
     companyUrl: 'https://www.jinhaksa.co.kr/',
+    company: '조인앤조인',
+    department: '스타트업',
+    level: '공동창업자',
+    startDate: '2017.11.02',
+    endDate: '2019.3.28',
+    description: ['신규 사업 탐색 및 아이디에이션'],
+    skills: ['Android', 'Java', 'Angular', 'JavaScript', 'Firebase'],
+  },
+  {
+    logo: jinhakLogo,
+    companyUrl: 'https://www.jinhaksa.co.kr/',
     company: '진학사',
     department: '신사업본부',
+    level: 'PD(Program Developer)',
     startDate: '2019.12.02',
     endDate: '2020.9.28',
     description: ['신규 사업 탐색 및 아이디에이션'],
@@ -40,6 +52,7 @@ export const workExperience = [
     companyUrl: 'https://catch.co.kr',
     company: '진학사',
     department: '캐치본부 개발팀',
+    level: 'PD(Program Developer)',
     startDate: '2020.9.29',
     endDate: '2023.10.11',
     description: ['캐치 웹 서비스 유지보수 및 신규 기능 개발'],
@@ -50,10 +63,19 @@ export const workExperience = [
     companyUrl: 'https://sbsi.co.kr',
     company: 'SBSi',
     department: '플랫폼개발팀',
+    level: '대리',
     startDate: '2023.10.10',
+    description: ['연합뉴스 플랫폼리포지션 사업 참여'],
+    skills: ['Vue.js', 'React', 'Next.js', 'Vanilla.js', 'Node.js', 'Spring Boot', 'Oracle', 'AWS'],
     project: [{
-      title: '연합뉴스 플랫폼리포지션 사업 참여',
+      title: '연합뉴스 홈페이지 개편',
       description: `
+
+      서울시스템에서 만든 CPS라는 프로그램에서 개발진행 
+      기존 jQuery로 개발된 홈페이지를 Vanilla.js로 리뉴얼
+
+      * 주요 성과
+      - 개편 후 PV 11배 성장
       대규모 플랫폼 리포지션 사업에 PM으로 참여하여, 통합회원, 홈페이지, 관리자, 모바일 프로젝트를 기획/운영
       - 연합뉴스 통합회원 서비스 개발
       개편 전 (2017.03.15 ~ 2025.02.21, 약 8년간)
@@ -72,12 +94,41 @@ export const workExperience = [
       
       - 헬로아카이브 모바일 서비스 개발`,
       date: '2023.10.10 ~ ',
-      skills: ['Vue.js', 'React', 'Next.js', 'Vanilla.js', 'Node.js', 'Spring Boot', 'Oracle', 'AWS'],
+      skills: ['Vanilla.js', 'AWS'],
       link: 'https://sbsi.co.kr',
       github: 'https://github.com/ParkBeomMin/sbsi',
+    },{
+      title: '연합뉴스 통합회원 서비스 개발',
+      description: `
+      기존 연합뉴스 회원과 헬로아카이브 회원을 통합하여 하나의 회원 시스템으로 구축
+      OAuth 2.0 소셜 로그인 기능 개발
+      JWT 토큰 기반 인증 및 권한 관리 기능 개발
+      연합뉴스와 헬로아카이브 SSO 연동 기능 개발
+
+      * 주요 성과
+      - 회원 가입자 수 8배 증가 (기존 대비)
+      개인회원 전체 가입자 40300 2025.02.22 이후 가입 35578 2025.02.22 이전 가입 4722 이전 가입자 중 전환 가입자 158
+      기존 회원 전환율은 3.3%로 저조, 하지만 신규 유입 효과가 이를 상쇄하고도 남음
+      - 월평균 매출 2.3배 성장 (헬로아카이브 매출 기준)
+      `,
+      date: '2023.11.03 ~ 2025.02.22',
+      skills: ['Vue.js', 'JavaScript', 'Pinia', 'Spring Boot', 'Oracle', 'AWS', 'Redis'],
+      link: 'https://join.yna.co.kr',
+    },{
+      title: '연합뉴스 관리자 페이지 기능 개발 및 유지보수',
+      description: `
+      연합뉴스 관리자 페이지 개발`,
+      date: '2024.03.13 ~ ',
+      skills: ['React', 'TypeScript', 'Redux-toolkit', 'Redux Saga', 'Ant Design', 'Spring Boot', 'Oracle'],
+    },{
+      title: '헬로아카이브 모바일 웹서비스 개발',
+      description: `
+      
+      `,
+      date: '2025.04.03 ~ ',
+      skills: ['React', 'Next.js', 'TypeScript', 'Redux-toolkit', 'Spring Boot', 'Oracle'],
+      link: 'https://m.helloarchive.co.kr',
     }],
-    description: ['연합뉴스 플랫폼리포지션 사업 참여'],
-    skills: ['Vue.js', 'React', 'Next.js', 'Vanilla.js', 'Node.js', 'Spring Boot', 'Oracle', 'AWS'],
   },
 ]
 

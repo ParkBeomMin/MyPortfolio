@@ -1,5 +1,6 @@
 import { workExperience as workExperienceData } from '../data';
 import { useMemo } from 'react';
+import CareerTable from './CareerTable';
 const WorkExperience = () => {
 
     const workExperience = useMemo(() => {
@@ -19,8 +20,10 @@ const WorkExperience = () => {
     
   return (
     <section id="experience">
-      <h3 className="text-2xl font-bold">Work Experience</h3>
-      <p className="text-sm text-gray-500 mb-4">총 경력 {totalCareerYears}년</p>
+      <div className="mb-4">
+        <h3 className="text-2xl font-bold">Work Experience</h3>
+        <p className="text-sm text-gray-500">총 경력 {totalCareerYears}년</p>
+      </div>
       <div className="space-y-6">
         {workExperience.map((experience, index) => (
           <div key={index} className="bg-gray-100 p-4 rounded-md">
@@ -46,6 +49,10 @@ const WorkExperience = () => {
           </div>
         ))}
       </div>
+
+      {/* 경력기술서 표 */}
+      <CareerTable />
+
     </section>
   );
 };
