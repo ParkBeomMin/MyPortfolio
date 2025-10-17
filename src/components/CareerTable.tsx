@@ -27,7 +27,7 @@ const CareerTable = () => {
               // 프로젝트가 있으면 프로젝트별로, 없으면 빈 프로젝트 배열로 처리
               const projects = experience.project && experience.project.length > 0 
                 ? experience.project 
-                : [{ title: '', role: '', date: '', description: '', link: '' }];
+                : [{ title: '', role: '', date: '', description: '', skills:[],  link: '' }];
               
               return projects.map((project, pIdx) => (
                 <tr 
@@ -110,6 +110,9 @@ const CareerTable = () => {
                                 </a>
                               )} */}
                             </div>
+                          </div>
+                          <div className="text-xs text-gray-700 dark:text-gray-300 whitespace-pre-line">
+                            기술스택: {project.skills.join(', ')}
                           </div>
                           <div className="text-xs text-gray-700 dark:text-gray-300 whitespace-pre-line">
                             {project.description}
