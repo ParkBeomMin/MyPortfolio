@@ -27,7 +27,7 @@ const CareerTable = () => {
               // 프로젝트가 있으면 프로젝트별로, 없으면 빈 프로젝트 배열로 처리
               const projects = experience.project && experience.project.length > 0 
                 ? experience.project 
-                : [{ title: '', date: '', description: '', link: '', github: '' }];
+                : [{ title: '', role: '', date: '', description: '', link: '' }];
               
               return projects.map((project, pIdx) => (
                 <tr 
@@ -66,7 +66,7 @@ const CareerTable = () => {
                   
                   {/* 역할 - 각 프로젝트별로 표시 */}
                   <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-center align-middle">
-                    <div className="font-medium">{experience.level || experience.department}</div>
+                    <div className="font-medium">{project.role}</div>
                   </td>
                   
                   {/* 프로젝트 기간 */}
@@ -99,7 +99,7 @@ const CareerTable = () => {
                                   🔗 사이트
                                 </a>
                               )}
-                              {project.github && (
+                              {/* {project.github && (
                                 <a 
                                   href={project.github} 
                                   target="_blank" 
@@ -108,7 +108,7 @@ const CareerTable = () => {
                                 >
                                   📁 GitHub
                                 </a>
-                              )}
+                              )} */}
                             </div>
                           </div>
                           <div className="text-xs text-gray-700 dark:text-gray-300 whitespace-pre-line">
