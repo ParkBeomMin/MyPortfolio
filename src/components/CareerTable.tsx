@@ -1,4 +1,4 @@
-import { workExperience as workExperienceData } from '../data';
+import { workExperience as workExperienceData, Project } from '../data';
 import { useMemo } from 'react';
 
 const CareerTable = () => {
@@ -27,7 +27,7 @@ const CareerTable = () => {
               // 프로젝트가 있으면 프로젝트별로, 없으면 빈 프로젝트 배열로 처리
               const projects = experience.project && experience.project.length > 0 
                 ? experience.project 
-                : [{ title: '', role: '', date: '', description: '', skills:[],  link: '' }];
+                : [{ title: '', role: '', date: '', description: '', result: '', skills:[],  link: '' }];
               
               return projects.map((project, pIdx) => (
                 <tr 
@@ -112,11 +112,16 @@ const CareerTable = () => {
                             </div>
                           </div>
                           <div className="text-xs text-gray-700 dark:text-gray-300 whitespace-pre-line">
-                            기술스택: {project.skills.join(', ')}
+                            - 기술 스택<br/>{project.skills.join(', ')}
                           </div>
+                          <br/>
                           <div className="text-xs text-gray-700 dark:text-gray-300 whitespace-pre-line">
-                            {project.description}
+                            - 주요 업무{project.description}
                           </div>
+                          <br/>
+                          {(project as Project).result && <div className="text-xs text-gray-700 dark:text-gray-300 whitespace-pre-line">
+                            - 주요 성과{(project as Project).result}
+                          </div>}
                         </div>
                       </div>
                     ) : (
@@ -124,7 +129,7 @@ const CareerTable = () => {
                         {experience.description.map((desc, idx) => (
                           <li key={idx} className="flex items-start">
                             <span className="text-gray-400 mr-2">•</span>
-                            <span>{desc}</span>
+                            <span>- 주요 업무<br/>{desc}</span>
                           </li>
                         ))}
                       </ul>

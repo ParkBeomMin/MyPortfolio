@@ -1,3 +1,13 @@
+export interface Project {
+  title: string;
+  role: string;
+  description: string;
+  date: string;
+  skills: string[];
+  link?: string;
+  result?: string;
+}
+
 export const hero = "“정해진 틀에 갇히지 않고, 필요한 역할을 스스로 찾아 해내는 개발자” 박범민입니다.<br/>효율적인 구조와 소통으로 문제를 함께 해결합니다."
 
 export const about = `안녕하세요, “정해진 틀에 갇히지 않고, 필요한 역할을 스스로 찾아 해내는 개발자” 박범민입니다.
@@ -146,9 +156,8 @@ export const workExperience = [
       기존 jQuery 기반 홈페이지를 Vanilla JS로 리뉴얼해 성능 및 유지보수성 향상
       Handlebars.js를 사용해 템플릿 기반 페이지 구조를 구현
       이미지 Lazy Loading 적용
-      Gulp를 활용해 JS 파일 병합 및 분리, 업로드 자동화 프로세스를 구축
-
-      - 주요 성과
+      Gulp를 활용해 JS 파일 병합 및 분리, 업로드 자동화 프로세스를 구축`,
+      result: `
       개편 후 PV 11배 성장
       `,
       date: '2023.10.10 ~ ',
@@ -162,11 +171,10 @@ export const workExperience = [
       OAuth 2.0 소셜 로그인 및 JWT 기반 인증 구현
       연합뉴스와 헬로아카이브 SSO 연동 기능 개발
       Pinia를 활용한 상태 일관성 확보
-      AWS 환경에서 빌드·배포 파이프라인을 직접 구성(S3, EC2)
-
-      * 주요 성과
-      - 회원 가입자 수 8배 증가
-      - 월평균 매출 2.3배 성장 (헬로아카이브 매출 기준)
+      AWS 환경에서 빌드·배포 파이프라인을 직접 구성(S3, EC2)`,
+      result: `
+      회원 가입자 수 8배 증가
+      월평균 매출 2.3배 성장 (헬로아카이브 매출 기준)
       `,
       date: '2023.11.03 ~ 2025.02.22',
       skills: ['Vue.js', 'JavaScript', 'Pinia', 'Spring Boot', 'Oracle', 'AWS', 'Redis'],
@@ -179,11 +187,11 @@ export const workExperience = [
       메뉴·권한 관리 메뉴 구조 설계 및 신규 개발(프론트, 백엔드)
       Ant Design 기반의 UI 컴포넌트를 활용해 관리자 페이지의 일관된 인터페이스를 구축
       Axios 인터셉터를 적용해 API 호출 구조 공통화
-      Redux-Saga를 활용해 비동기 API 호출 로직을 구조화
-
-      * 주요 성과
-      - api 응답 일관성 확보
-      - 중복 코드 감소로 유지보수성 향상`,
+      Redux-Saga를 활용해 비동기 API 호출 로직을 구조화`,
+      result: `
+      api 응답 일관성 확보
+      중복 코드 감소로 유지보수성 향상
+      `,
       date: '2024.03.13 ~ ',
       skills: ['React', 'TypeScript', 'Redux-toolkit', 'Redux Saga', 'Ant Design', 'Spring Boot', 'Oracle'],
     },{
@@ -192,13 +200,11 @@ export const workExperience = [
       description: `
       React·Next.js 기반 모바일 웹 신규 개발 및 구조 안정화
       하이드레이션 오류 및 페이지 전환 성능 이슈 해결로 UX 개선
-      공통 팝업 컴포넌트 구축
-
-      * 주요 성과
-      - 프로젝트 진행 속도 약 3배 향상
-      - 페이지 전환 속도를 약 1.8배 향상
-      - 중복 코드 감소로 유지보수성 향상
-      
+      공통 팝업 컴포넌트 구축`,
+      result: `
+      프로젝트 진행 속도 약 3배 향상
+      페이지 전환 속도를 약 1.8배 향상
+      중복 코드 감소로 유지보수성 향상
       `,
       date: '2025.04.03 ~ ',
       skills: ['React', 'Next.js', 'TypeScript', 'Redux-toolkit'],
