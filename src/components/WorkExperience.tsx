@@ -22,7 +22,7 @@ const WorkExperience = () => {
     }, [workExperience]);
     
   return (
-    <section id="experience">
+    <section id="work-experience">
       <div className="mb-4">
         <h3 className="text-2xl font-bold">Work Experience</h3>
         <p className="text-sm text-gray-500">총 경력 {totalCareer.years}년 {totalCareer.months}개월</p>

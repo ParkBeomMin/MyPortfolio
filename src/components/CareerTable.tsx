@@ -144,7 +144,7 @@ const CareerTable = () => {
       </div>
       
       {/* PDF 다운로드 링크 */}
-      <div className="mt-4 text-center">
+      {/* <div className="mt-4 text-center">
         <a 
           href="/resume.pdf" 
           target="_blank" 
@@ -156,7 +156,7 @@ const CareerTable = () => {
           </svg>
           <span>경력기술서 PDF 다운로드</span>
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };
