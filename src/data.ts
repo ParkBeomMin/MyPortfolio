@@ -148,7 +148,57 @@ export const workExperience = [
     startDate: '2023.10.10',
     description: ['연합뉴스 플랫폼리포지션 사업 참여'],
     skills: ['Vue.js', 'React', 'Next.js', 'Vanilla.js', 'Node.js', 'Spring Boot', 'Oracle', 'AWS'],
-    project: [{
+    project: [
+      {
+        title: '헬로아카이브 모바일 웹서비스 신규 개발',
+        role: 'FE',
+        description: `
+        React·Next.js 기반 모바일 웹 신규 개발 및 구조 안정화
+        하이드레이션 오류 및 페이지 전환 성능 이슈 해결로 UX 개선
+        공통 팝업 컴포넌트 구축`,
+        result: `
+        프로젝트 진행 속도 약 3배 향상
+        페이지 전환 속도를 약 1.8배 향상
+        중복 코드 감소로 유지보수성 향상
+        `,
+        date: '2025.04.03 ~ ',
+        skills: ['React', 'Next.js', 'TypeScript', 'Redux-toolkit'],
+        link: 'https://m.helloarchive.co.kr',
+      },
+      {
+        title: '연합뉴스 관리자 페이지 기능 개발 및 유지보수',
+        role: 'FE, BE',
+        description: `
+        게시판 관리 메뉴 신규 개발(프론트)
+        메뉴·권한 관리 메뉴 구조 설계 및 신규 개발(프론트, 백엔드)
+        Ant Design 기반의 UI 컴포넌트를 활용해 관리자 페이지의 일관된 인터페이스를 구축
+        Axios 인터셉터를 적용해 API 호출 구조 공통화
+        Redux-Saga를 활용해 비동기 API 호출 로직을 구조화`,
+        result: `
+        api 응답 일관성 확보
+        중복 코드 감소로 유지보수성 향상
+        `,
+        date: '2024.03.13 ~ ',
+        skills: ['React', 'TypeScript', 'Redux-toolkit', 'Redux Saga', 'Ant Design', 'Spring Boot', 'Oracle'],
+      },
+      {
+        title: '연합뉴스 통합회원 서비스 신규 개발',
+        role: 'FE, BE',
+        description: `
+        연합뉴스·헬로아카이브 회원을 통합한 단일 회원 시스템 구축
+        OAuth 2.0 소셜 로그인 및 JWT 기반 인증 구현
+        연합뉴스와 헬로아카이브 SSO 연동 기능 개발
+        Pinia를 활용한 상태 일관성 확보
+        AWS 환경에서 빌드·배포 파이프라인을 직접 구성(S3, EC2)`,
+        result: `
+        회원 가입자 수 8배 증가
+        월평균 매출 2.3배 성장 (헬로아카이브 매출 기준)
+        `,
+        date: '2023.11.03 ~ 2025.02.22',
+        skills: ['Vue.js', 'JavaScript', 'Pinia', 'Spring Boot', 'Oracle', 'AWS', 'Redis'],
+        link: 'https://join.yna.co.kr',
+      },
+      {
       title: '연합뉴스 홈페이지 개편',
       role: 'FE',
       description: `
@@ -163,53 +213,7 @@ export const workExperience = [
       date: '2023.10.10 ~ ',
       skills: ['Vanilla.js', 'AWS'],
       link: 'https://yna.co.kr',
-    },{
-      title: '연합뉴스 통합회원 서비스 신규 개발',
-      role: 'FE, BE',
-      description: `
-      연합뉴스·헬로아카이브 회원을 통합한 단일 회원 시스템 구축
-      OAuth 2.0 소셜 로그인 및 JWT 기반 인증 구현
-      연합뉴스와 헬로아카이브 SSO 연동 기능 개발
-      Pinia를 활용한 상태 일관성 확보
-      AWS 환경에서 빌드·배포 파이프라인을 직접 구성(S3, EC2)`,
-      result: `
-      회원 가입자 수 8배 증가
-      월평균 매출 2.3배 성장 (헬로아카이브 매출 기준)
-      `,
-      date: '2023.11.03 ~ 2025.02.22',
-      skills: ['Vue.js', 'JavaScript', 'Pinia', 'Spring Boot', 'Oracle', 'AWS', 'Redis'],
-      link: 'https://join.yna.co.kr',
-    },{
-      title: '연합뉴스 관리자 페이지 기능 개발 및 유지보수',
-      role: 'FE, BE',
-      description: `
-      게시판 관리 메뉴 신규 개발(프론트)
-      메뉴·권한 관리 메뉴 구조 설계 및 신규 개발(프론트, 백엔드)
-      Ant Design 기반의 UI 컴포넌트를 활용해 관리자 페이지의 일관된 인터페이스를 구축
-      Axios 인터셉터를 적용해 API 호출 구조 공통화
-      Redux-Saga를 활용해 비동기 API 호출 로직을 구조화`,
-      result: `
-      api 응답 일관성 확보
-      중복 코드 감소로 유지보수성 향상
-      `,
-      date: '2024.03.13 ~ ',
-      skills: ['React', 'TypeScript', 'Redux-toolkit', 'Redux Saga', 'Ant Design', 'Spring Boot', 'Oracle'],
-    },{
-      title: '헬로아카이브 모바일 웹서비스 신규 개발',
-      role: 'FE',
-      description: `
-      React·Next.js 기반 모바일 웹 신규 개발 및 구조 안정화
-      하이드레이션 오류 및 페이지 전환 성능 이슈 해결로 UX 개선
-      공통 팝업 컴포넌트 구축`,
-      result: `
-      프로젝트 진행 속도 약 3배 향상
-      페이지 전환 속도를 약 1.8배 향상
-      중복 코드 감소로 유지보수성 향상
-      `,
-      date: '2025.04.03 ~ ',
-      skills: ['React', 'Next.js', 'TypeScript', 'Redux-toolkit'],
-      link: 'https://m.helloarchive.co.kr',
-    }],
+    },],
   },
 ]
 
