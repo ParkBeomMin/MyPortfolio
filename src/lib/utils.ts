@@ -1,5 +1,6 @@
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
+import { WorkExperienceDataItem } from "../data"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -56,7 +57,7 @@ export function getRelativeTime(date: Date): string {
 // 년, 월, 일 계산 함수
 export function getDetailedTime(startDate: string, endDate?: string) {
   const start = new Date(startDate);
-  const end = endDate ? new Date(endDate) : new Date();
+  const end = endDate && endDate !== '재직 중' ? new Date(endDate) : new Date();
   
   let years = end.getFullYear() - start.getFullYear();
   let months = end.getMonth() - start.getMonth();
@@ -71,6 +72,17 @@ export function getDetailedTime(startDate: string, endDate?: string) {
     years--;
     months += 12;
   }
-  
   return { years, months, days };
+}
+
+export function getTotalCareer(workExperience: WorkExperienceDataItem[]) {
+  let totalYears = workExperience.reduce((acc, curr) => {
+    return acc + getDetailedTime(curr.startDate, curr?.endDate).years;
+  }, 0);
+  let totalMonths = workExperience.reduce((acc, curr) => {
+    return acc + getDetailedTime(curr.startDate, curr?.endDate).months;
+  }, 0);
+  totalYears += totalMonths / 12;
+  totalMonths %= 12;
+  return { years: Math.floor(totalYears), months: totalMonths };
 }

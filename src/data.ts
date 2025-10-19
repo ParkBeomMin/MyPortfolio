@@ -8,6 +8,16 @@ export interface Project {
   result?: string;
 }
 
+export interface WorkExperienceDataItem {
+  logo: string;
+  companyUrl: string;
+  company: string;
+  department: string;
+  level: string;
+  startDate: string;
+  endDate: string;
+}
+
 export const hero = "“정해진 틀에 갇히지 않고, 필요한 역할을 스스로 찾아 해내는 개발자” 박범민입니다.<br/>효율적인 구조와 소통으로 문제를 함께 해결합니다."
 
 export const about = `안녕하세요, “정해진 틀에 갇히지 않고, 필요한 역할을 스스로 찾아 해내는 개발자” 박범민입니다.<br/><br/>

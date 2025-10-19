@@ -1,7 +1,7 @@
 import { workExperience as workExperienceData } from '../data';
-import { useMemo } from 'react';
+import { useMemo, useCallback } from 'react';
 import CareerTable from './CareerTable';
-import { getDetailedTime } from '../lib/utils';
+import { getTotalCareer, getDetailedTime } from '../lib/utils';
 const WorkExperience = () => {
 
     const workExperience = useMemo(() => {
@@ -14,12 +14,14 @@ const WorkExperience = () => {
     const totalCareer = useMemo(() => {
         if (workExperience.length === 0) return { years: 0, months: 0, days: 0 };
         
-        // 첫 번째 경력 시작일부터 현재까지의 총 경력 계산
-        const firstStartDate = workExperience[workExperience.length - 1].startDate; // 가장 오래된 경력
-        const detailedTime = getDetailedTime(firstStartDate);
-        
-        return detailedTime;
+            // 첫 번째 경력 시작일부터 현재까지의 총 경력 계산
+        return getTotalCareer(workExperience);
     }, [workExperience]);
+
+    const getCareerTime = useCallback((startDate: string, endDate: string) => {
+      const time = getDetailedTime(startDate, endDate);
+      return `${time.years}년 ${time.months}개월`;
+    }, []);
     
   return (
     <section id="work-experience">
@@ -38,7 +40,7 @@ const WorkExperience = () => {
                 }
                 {experience.company} | {experience.department}
             </h4>
-            <p className="text-sm text-gray-500">{experience.startDate} ~ {experience.endDate}</p>
+            <p className="text-sm text-gray-500">{experience.startDate} ~ {experience.endDate} ({getCareerTime(experience.startDate, experience?.endDate)})</p>
             {experience?.skills && <div className="flex flex-wrap gap-2 mb-2 mt-2">
                 {experience?.skills?.map((skill, index) => (
                     <span key={index} className="bg-gray-200 px-2 py-1 rounded-full text-sm">{skill}</span>

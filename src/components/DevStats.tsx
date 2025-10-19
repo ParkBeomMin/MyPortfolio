@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
-import { calculateDaysSince, formatDate, getDetailedTime } from '../lib/utils';
+import { calculateDaysSince, formatDate, getTotalCareer } from '../lib/utils';
+import { workExperience } from '../data';
 
 interface DevStatsProps {
   startDate: string;
   lastUpdate: string;
 }
 
-const DevStats = ({ startDate, lastUpdate }: DevStatsProps) => {
+const DevStats = ({ lastUpdate }: DevStatsProps) => {
   const [daysSinceUpdate, setDaysSinceUpdate] = useState(0);
 
   useEffect(() => {
@@ -14,7 +15,10 @@ const DevStats = ({ startDate, lastUpdate }: DevStatsProps) => {
     setDaysSinceUpdate(calculateDaysSince(lastUpdate));
   }, [lastUpdate]);
 
-  const detailedTime = getDetailedTime(startDate);
+  const detailedTime = getTotalCareer(workExperience.map((experience) => ({
+    ...experience,
+    endDate: experience.endDate ? experience.endDate : '재직 중',
+  })));
 
   return (
     <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 mb-6 border border-gray-200 dark:border-gray-700">
