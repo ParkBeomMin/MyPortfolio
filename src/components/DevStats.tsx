@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { calculateDaysSince, formatDate } from '../lib/utils';
+import { calculateDaysSince, formatDate, getDetailedTime } from '../lib/utils';
 
 interface DevStatsProps {
   startDate: string;
@@ -7,36 +7,12 @@ interface DevStatsProps {
 }
 
 const DevStats = ({ startDate, lastUpdate }: DevStatsProps) => {
-  const [daysSinceStart, setDaysSinceStart] = useState(0);
   const [daysSinceUpdate, setDaysSinceUpdate] = useState(0);
 
   useEffect(() => {
     // 초기 계산
-    setDaysSinceStart(calculateDaysSince(startDate));
     setDaysSinceUpdate(calculateDaysSince(lastUpdate));
-  }, [startDate, lastUpdate]);
-
-  // 년, 월, 일 계산
-  const getDetailedTime = (startDate: string) => {
-    const start = new Date(startDate);
-    const now = new Date();
-    
-    let years = now.getFullYear() - start.getFullYear();
-    let months = now.getMonth() - start.getMonth();
-    let days = now.getDate() - start.getDate();
-    
-    if (days < 0) {
-      months--;
-      days += new Date(now.getFullYear(), now.getMonth(), 0).getDate();
-    }
-    
-    if (months < 0) {
-      years--;
-      months += 12;
-    }
-    
-    return { years, months, days };
-  };
+  }, [lastUpdate]);
 
   const detailedTime = getDetailedTime(startDate);
 

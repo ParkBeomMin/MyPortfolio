@@ -22,13 +22,13 @@ export const about = `안녕하세요, 될 방법을 먼저 고민하는 웹 개
 그것이 제가 지향하는 개발자의 모습입니다.`
 
 
-import jinhakLogo from './assets/jinhak.svg';
+import joinandjoinLogo from './assets/joinandjoin.webp';
 import catchLogo from './assets/catch.svg';
-import sbsiLogo from './assets/sbsi.svg';
+import sbsiLogo from './assets/sbsi.png';
 export const workExperience = [
   {
-    logo: jinhakLogo,
-    companyUrl: 'https://www.jinhaksa.co.kr/',
+    logo: joinandjoinLogo,
+    companyUrl: 'https://www.joinandjoin.com/',
     company: '조인앤조인',
     department: '스타트업',
     level: '공동창업자',
@@ -217,27 +217,81 @@ export const workExperience = [
   },
 ]
 
+import duckmuImg1 from './assets/duckmu/duckmu1.png';
+import duckmuImg2 from './assets/duckmu/duckmu2.png';
+import beomjeonImg1 from './assets/beomjeon/beomjeon1.png';
+import beomjeonImg2 from './assets/beomjeon/beomjeon2.png';
+import whatIsMyTeamImg1 from './assets/whatismyteam/whatismyteam1.png';
+import whatIsMyTeamImg2 from './assets/whatismyteam/whatismyteam2.png';
+import aboutMeImg1 from './assets/aboutme/aboutme1.png';
+import aboutMeImg2 from './assets/aboutme/aboutme2.png';
+import josikbotImg1 from './assets/josik/조식봇1.png';
+import josikbotImg2 from './assets/josik/조식봇2.png';
+
 export const projects = [
   {
-    title: 'What is my team?',
-    skills: ['Vue.js', 'teachable machine'],
-    description: '인공지능 모델을 활용한  팀 추천 서비스',
-    link: 'https://what-is-my-team.web.app/premier24-25',
-    github: 'https://github.com/ParkBeomMin/WhatIsMyTeam',
-  },
-  {
-    title: 'About me',
-    skills: ['Nuxt.js', 'Firebase Firestore'],
-    description: '친구들이 생각하는 나는 어떤 사람일까?',
-    link: 'https://aboutme2.web.app/',
-    github: 'https://github.com/ParkBeomMin/AboutMe-Nuxt',
+    title: '덕뮤',
+    skills: ['Vue.js', 'Node.js', 'Firebase'],
+    date: '2025.08.05 ~ 2025.09.22',
+    description: `덕질 커뮤니티 서비스`,
+    link: 'https://duckmu.com',
+    images: [
+      duckmuImg1,
+      duckmuImg2,
+    ]
   },
   {
     title: 'Beomjeon',
     skills: ['Next.js'],
-    description: '개발 지식 위키',
+    description: `개인 기록용 개발 지식 위키`,
     link: 'https://beomjeon-docs.vercel.app/',
     github: 'https://github.com/ParkBeomMin/beomjeon/tree/main/apps/docs',
+    images: [
+      beomjeonImg1,
+      beomjeonImg2,
+    ]
+  },
+  {
+    title: 'About me',
+    skills: ['Vanilla.js', 'Firebase Firestore'],
+    date: '2023.06.19 ~ 2023.06.27',
+    description: `친구들이 생각하는 나는 어떤 사람일까?
+    
+    - history api를 활용해 SPA 구조 직접 구현`,
+    link: 'https://aboutme2.web.app/',
+    github: 'https://github.com/ParkBeomMin/AboutMe-Nuxt',
+    images: [
+      aboutMeImg1,
+      aboutMeImg2,
+    ]
+  },
+  {
+    title: '조식봇',
+    skills: ['Node.js', 'JavaScript', 'Vision API', 'Firebase'],
+    date: '2023.01.10 ~ 2023.02.22',
+    description: `진학사의 조식 메뉴를 간편하게 알 수 있는 챗봇
+
+    - google vision api를 통해 이미지에서 텍스트를 추출`,
+    link: 'https://pf.kakao.com/_Qaxaxaxj',
+    images: [
+      josikbotImg1,
+      josikbotImg2,
+    ]
+  },
+  {
+    title: 'What is my team?',
+    skills: ['Vue.js', 'teachable machine'],
+    date: '2022.12.04 ~ 2022.02.13',
+    description: `인공지능 모델을 활용한 팀 추천 서비스
+    
+    - 팀별 선수들 사진 크롤링
+    - teachablemachine 서비스를 이용해 학습된 모델 생성`,
+    link: 'https://what-is-my-team.web.app/premier24-25',
+    github: 'https://github.com/ParkBeomMin/WhatIsMyTeam',
+    images: [
+      whatIsMyTeamImg1,
+      whatIsMyTeamImg2,
+    ]
   },
 ]
 
@@ -251,5 +305,7 @@ export const skills = [
   'MSSQL',
   'Oracle',
   'Vanilla.js',
+  'Firebase',
+  'Spring Boot',
   
 ]

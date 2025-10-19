@@ -52,3 +52,25 @@ export function getRelativeTime(date: Date): string {
     return `${years}년 전`
   }
 }
+
+// 년, 월, 일 계산 함수
+export function getDetailedTime(startDate: string, endDate?: string) {
+  const start = new Date(startDate);
+  const end = endDate ? new Date(endDate) : new Date();
+  
+  let years = end.getFullYear() - start.getFullYear();
+  let months = end.getMonth() - start.getMonth();
+  let days = end.getDate() - start.getDate();
+  
+  if (days < 0) {
+    months--;
+    days += new Date(end.getFullYear(), end.getMonth(), 0).getDate();
+  }
+  
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+  
+  return { years, months, days };
+}

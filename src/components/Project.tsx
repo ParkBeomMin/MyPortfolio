@@ -1,16 +1,34 @@
+import { useState } from 'react';
 import { projects } from '../data';
 
 const Project = () => {
+  const [selectedProject, setSelectedProject] = useState<number | null>(null);
   return (
     <section id="projects">
         <h3 className="text-2xl font-bold mb-4">Projects</h3>
         <p className="text-sm text-gray-500 mb-6">개인적으로 진행한 프로젝트들입니다</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg transition-all duration-200 hover:scale-105">
+            <div 
+                key={index} 
+                className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg transition-all duration-200 hover:scale-105 relative"
+            >
+                
                 <div className="flex items-start justify-between mb-3">
                     <h4 className="font-semibold text-lg text-gray-900 dark:text-white">{project.title}</h4>
                     <div className="flex space-x-2">
+                        {/* 사진보기 버튼 */}
+                        {project.images && (
+                            <button
+                                onClick={() => setSelectedProject(index)}
+                                className="text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 transition-colors p-0"
+                                title="사진보기"
+                            >
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                            </button>
+                        )}
                         {project.github && (
                             <a 
                                 href={project.github} 
@@ -40,7 +58,7 @@ const Project = () => {
                     </div>
                 </div>
                 
-                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">{project.description}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 leading-relaxed whitespace-pre-line" dangerouslySetInnerHTML={{ __html: project.description }}></p>
                 
                 <div className="flex flex-wrap gap-2">
                     {project.skills.map((skill, skillIndex) => (
@@ -55,6 +73,49 @@ const Project = () => {
             </div>
         ))}
         </div>
+
+        {/* 이미지 모달 */}
+        {selectedProject !== null && projects[selectedProject]?.images && (
+            <div 
+                className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+                onClick={() => setSelectedProject(null)}
+            >
+                <div 
+                    className="bg-white dark:bg-gray-800 rounded-lg max-w-4xl max-h-[90vh] overflow-hidden"
+                    onClick={(e) => e.stopPropagation()}
+                >
+                    <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+                        <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                            {projects[selectedProject].title} - 사용 예시
+                        </h3>
+                        <button
+                            onClick={() => setSelectedProject(null)}
+                            className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div className="p-4 overflow-y-auto max-h-[70vh]">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {projects[selectedProject].images.map((image, imageIndex) => (
+                                <div key={imageIndex} className="relative">
+                                    <img 
+                                        src={image} 
+                                        alt={`${projects[selectedProject].title} 예시 ${imageIndex + 1}`}
+                                        className="w-full h-auto rounded-lg shadow-lg"
+                                    />
+                                    <div className="absolute bottom-2 left-2 bg-black bg-opacity-70 text-white px-2 py-1 rounded text-sm">
+                                        {imageIndex + 1} / {projects[selectedProject].images.length}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )}
     </section>
   );
 };
