@@ -148,8 +148,8 @@ export const workExperience = [
       이미지 Lazy Loading 적용
       Gulp를 활용해 JS 파일 병합 및 분리, 업로드 자동화 프로세스를 구축
 
-      * 주요 성과
-      - 개편 후 PV 11배 성장
+      - 주요 성과
+      개편 후 PV 11배 성장
       `,
       date: '2023.10.10 ~ ',
       skills: ['Vanilla.js', 'AWS'],
