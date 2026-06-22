@@ -239,8 +239,8 @@ export const workExperience = [
 
 import duckmuImg1 from './assets/duckmu/duckmu1.png';
 import duckmuImg2 from './assets/duckmu/duckmu2.png';
-import beomjeonImg1 from './assets/beomjeon/beomjeon1.png';
-import beomjeonImg2 from './assets/beomjeon/beomjeon2.png';
+// import beomjeonImg1 from './assets/beomjeon/beomjeon1.png';
+// import beomjeonImg2 from './assets/beomjeon/beomjeon2.png';
 import whatIsMyTeamImg1 from './assets/whatismyteam/whatismyteam1.png';
 import whatIsMyTeamImg2 from './assets/whatismyteam/whatismyteam2.png';
 import aboutMeImg1 from './assets/aboutme/aboutme1.png';
